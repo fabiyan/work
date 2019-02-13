@@ -1,0 +1,10 @@
+#div2{
+    background-image: url('./img/3.jpg');
+    width:200px;
+    height:200px;
+    transform: translate(50deg);
+   
+}
+.aa{
+    text-align: center;
+}
