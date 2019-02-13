@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[1,2,3,4,3,2,5,6];
+        let b=new Set(a);
+        console.log(a);
+        console.log(b);
+        let c=[...b];
+        console.log(c);//将Set中的重复项去掉并重新赋给新的数组
+        // 其余的数组去重
+        let result=[];
+        // for(let val of a){
+        //     if(!result.includes(val)){
+        //         result.push(val);
+        //     }
+        // }
+        // console.log(result);
+        // for(let val of a){
+        //     if(result.indexOf(val)==-1){
+        //         result.push(val);
+        //     }
+        // }
+
+        // console.log(result);
+        //   for(let val of a.keys()){
+        //         console.log(val);
+        //   }
+        console.log(b.has(6));
+        console.log(b.delete(3));
+        console.log(b.clear());
+        console.log(b.size);
+        // 还有遍历：keys()		values()		entires()		forEach()		for…of 
+
+        // Map:
+        // 相比于set的方法，map新增了set 和 get方法
+
+        let ar=new Map();//键值对
+        ar.set('key','value');//key也可以是变量或者对象
+        console.log(ar);
+        console.log(ar.get('key'));
+
+
+    </script>
+</body>
+</html>

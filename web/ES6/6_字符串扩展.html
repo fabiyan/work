@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // var str="hello ";
+            // var str1='world';
+            // console.log(str+str1);
+
+            // '<div id="div1">哈哈哈</div>'
+            // var id="div2";
+            // var txt="text";
+            // console.log('<div id="'+id+'">'+txt+'</div>');
+            // 模板字符串 `${}`;
+            // console.log(`<div id="${id}">${txt}</div>`);//注意引号是！左边的键
+            // console.log(`哈哈${age == 20?20:100}呵呵${a+b}`);
+
+            var str = "bafgab";
+        // console.log(str.indexOf('b'));
+        console.log(str.includes('ab',3));
+        console.log(str.startsWith('ab',3));
+        console.log(str.endsWith('fg',3));//到第三个，但不包括第三个，看此字符串前边是否是fg;
+        console.log(str.padStart(8,'x'));//从字符串开头开始，补x,直到加上原来的字符够8个
+        console.log(str.padEnd(8,'x'));//从字符串结尾开始，补x,直到加上原来的字符够8个
+        console.log( str.repeat(3));//重复三次
+        
+        </script>
+</body>
+</html>

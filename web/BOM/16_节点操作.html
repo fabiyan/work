@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">hello world</p>
+    </div>
+    <button id="btn">动手啊</button>
+    <script>
+        // document.createElement();创建节点
+        // document.appendChild();添加节点，在某节点的内部末尾
+        // document.replaceChild(new,old);替换，替换某节点内部的节点
+        // document.insertBefore(new resist);在某节点的内部的某个节点前边插入
+        // document.removeChild();删除某节点的内部节点
+        // document.cloneNode();克隆某节点，括号里为空，则只克隆某节点本身，
+        //                     若为true，则克隆某节点及其内部所有
+
+        var oDiv1= document.getElementById("div1");
+        var newNode=document.createElement('h1');
+        var oBtn=document.getElementById("btn");
+        var oP=document.getElementById('p1');
+          newNode.innerHTML="i am fine ";
+        oBtn.onclick=function(){
+          
+        // oDiv1.appendChild(newNode);
+        // oDiv1.replaceChild(newNode,oP);
+        // oDiv1.insertBefore(newNode,oP);
+        // oDiv1.removeChild(oP);
+
+        //  var ne=oDiv1.cloneNode();
+        //  oDiv1.appendChild(ne);
+        
+ }
+
+    // 设置属性：document.setAttribute(name,value);
+    // 获得属性值：documnet.getAttribute(name);
+    oDiv1.setAttribute("xxxx","11111");
+    console.log(oDiv1.getAttribute("xxxx"));
+    </script>
+</body>
+</html>

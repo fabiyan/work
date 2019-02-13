@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">点击</div>
+
+    <script>
+        var oDiv= document.getElementById('div1');
+
+
+        // oDiv.onclick=function(){
+        //     console.log('111');
+        // }
+        // oDiv.onclick=function(){
+        //     console.log('222');
+        // }
+        // 这样绑事件，因为代码的顺序执行，故相同的绑定事件最后只执行后面的绑定事件
+        // 但可以使用添加事件监听来给一个节点绑定相同的多个事件，如
+        oDiv.addEventListener('click',function(){
+            console.log('1111');
+        },false);//false代表支持冒泡
+       oDiv.addEventListener('click',function(){
+           console.log('2222');
+       },false);//false代表支持冒泡
+    </script>
+</body>
+</html>

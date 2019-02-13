@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="aa" class="bb">111</div>
+    <div>111</div>
+    <div class="aa bb">222</div>
+    <div>111</div>
+    <div>111</div>
+    <div>111</div>
+    <script>
+
+        // 获取对象的三个方法：
+
+        // 1.  document.getElementById("id名")；
+        //    var oId =  document.getElementById("aa");
+        //    oId.style.color="red";
+
+        // 2.document.getElementsByTagName("标签名"),返回一个数组；
+        // var OTagname=document.getElementsByTagName("div");
+        //     for(var i=0;i<=OTagname.length;i++){
+        //          OTagname[i].style.color="green";   
+        //     }
+
+        // 3.document.getElementsByClassName("class名")
+        // var Ocla = document.getElementsByClassName("bb");
+        // for(var i=0;i<=Ocla.length;i++){
+        //     Ocla[i].style.background="red";
+        // }
+
+
+
+
+        //    第3种方法不支持ie8以下的浏览器，故可以封装一个如下类似的方法
+        // function getElementsByclass(clasname){
+        //     var All=document.getElementsByTagName("*");
+        //     var result=[];
+        //     for(var i = 0;i < All.length;i++){
+        //         if( All[i].className == clasname )
+        //         result.push(All[i]);
+        //     }
+        //     return result;
+        // }
+        //     var s=getElementsByclass('bb') ;
+        //     for(var i=0;i<s.length;i++){
+        //         s[i].style.color="blue";
+        //     }
+
+
+
+        // 上边封装的方法有一个缺点就是若抽class="a  b"此类型的，
+        // 系统会自动将a b认为是同一个字符串。
+        // 故可将下列的方法改进为：
+          function getElementsByclass(clasname){
+            var All=document.getElementsByTagName("*");
+            var result=[];
+            for(var i = 0;i < All.length;i++){
+
+                 var arr = All[i].className.split(" ");
+                 for(var j=0;j<arr.length;j++){
+                     if(arr[j] == clasname)
+                      result.push(All[i])
+                 }
+            }
+            return result;
+        }
+            var s=getElementsByclass('bb') ;
+            for(var i=0;i<s.length;i++){
+                s[i].style.color="pink";
+            }
+
+    </script>
+
+</body>
+
+</html>

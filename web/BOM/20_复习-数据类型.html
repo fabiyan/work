@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 数据类型
+    基本数据类型：string,boolean,number,undefined,null
+    引用数据类型: object,array -->
+    <!-- undefined:
+        1.定义后未赋值
+        2.数组越界
+        3.函数没有返回值
+        4.访问对象中没有的属性
+    null:
+        1.document.getElementById()未取到 -->
+    <!-- 判断数据类型：typeof () -->
+    <script>
+        // console.log(typeof(123));
+
+        // 引用数据类型的操作：
+        var person1 = {
+            name: "za",
+            age: 12,
+            student: {
+                name: "aa",
+                age: 40
+            }
+
+        }
+        // var person2 = {}
+
+        // var name in objname:循环取到objname中的各个属性，并赋给新定义的对象，并相互独立
+        // 浅克隆
+        // for(var key in person1){
+        //     person2[key]=person1[key];
+        // }
+        // console.log(person2);
+
+        // 深克隆
+        function clone(person1) {
+            var person2={};
+            for (var key in person1) {
+
+                if (typeof (person1[key]) == "object") {
+                    person2[key] = clone(person1[key]);
+                }else{
+                       person2[key] = person1[key];
+                }
+            }
+            return person2;
+        }
+        var person3 = clone(person1);
+        person1.student.age = 20;
+        console.log(person1);
+        console.log(person3);
+    </script>
+
+
+</body>
+
+</html>

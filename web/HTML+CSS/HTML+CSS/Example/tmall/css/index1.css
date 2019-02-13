@@ -1,0 +1,412 @@
+.search{
+    width:1230px;
+    margin: 1px auto;
+    overflow: hidden;
+}
+.logio{
+    float:left;
+    margin-left:-45px;
+    /* margin-left:-57px; */
+}
+.search-box{
+    float:left;
+    margin-left:70px;
+    margin-top:33px;
+    overflow: hidden;
+    
+}
+.clear-fix{
+    overflow: hidden;
+}
+.search-txt{
+    outline: none;
+    width:483px;
+    height:26px;
+    border:2px solid #ff0036;
+    font-size:14px;
+    padding: 5px 3px 5px 5px;
+    float:left;
+}
+.search-but{
+    width:128px;
+    height:40px;
+    background-color: #ff0036;
+    border:2px solid #ff0036;
+    color:#fff;
+    font-size: 18px;
+    /* 字之间的空隙 */
+    letter-spacing: 5px;
+    float:left;
+
+}
+.search-list{
+    margin-top:10px;
+    margin-left:-12px;
+}
+.search-list li{
+    float:left;
+    padding:0 12px;
+    border-left:1px solid #999;
+    line-height:1.1;
+}
+.search-list li a{
+    color:#999;
+    font-size:14px;
+    text-decoration: none;
+}
+.search-list li.red a{
+    color:#ff0036;
+}
+.inner-cont{
+    /* width:1030px; */
+    width:1030px;
+    height:35px;
+    line-height: 35px;
+    /* background-color: #999; */
+    margin:0 auto;
+    margin-top:-5px;
+    padding-left:200px;
+    /* background-color: aqua; */
+    /* overflow: hidden; */
+    border-bottom: 2px solid #ff0036;
+
+}
+.inner-cont img{
+    width:100px;
+    height:30px;
+    margin-top :2px;
+}
+.inner-cont a{
+    color:#444;
+    font-size: 16px;
+    font-weight :500px;
+    float:left;
+    
+    text-decoration: none;
+    margin:0 10px;
+    /* background-color: #ff0036; */
+   
+}
+/* .inner-cont a::after{
+    content:"";
+    display: block;
+    clear:both;
+} */
+.inner-cont a:hover{
+    color:#ff0036;
+}
+.right .icon-daohang{
+    color:red;
+}
+
+.content{
+    height:900px;
+    background: url(../img/bg.jpg) center -207px no-repeat;
+    position: relative;
+    
+}
+.content .iconfont{
+    color:#999;
+}
+.slide-content{
+    height:500px;
+    width:1230px;
+    margin:0 auto;
+    /* background-color: #999; */
+    background-color: #ff0036;
+    position: relative;
+    /* border-top:1px solid #ff0036; */
+    /* 若不加上面语句，会出现外边框合并的错误 */
+}
+.category{
+    /* margin-top:-35px; */
+    position: absolute;
+    top:-35px;
+    width:200px;
+    height:535px;
+    background-color: rgba(68,68,68,0.7);
+    z-index: 2;
+}
+.content .slide-content .main-cate-box{
+    font-size:14px;
+}
+.main-cate-box{
+    position: relative;
+}
+ .slide-content .main-cate-box a{
+    color:#fff;
+    text-decoration: none;    
+}
+ .cate-title{
+    padding:0 15px;
+    padding-top:10px;
+    background-color: #ff0036;
+    
+    
+}
+ .main-cate:hover a{
+    color:red;
+}
+.content .main-cate:hover {
+    background-color:white;
+}
+.content .main-cate i{
+    margin-right:10px;
+}
+/* .content .cate-title{
+    padding-left:10px;
+} */
+.content .main-cate{
+    padding:0 15px;
+    margin :9px 0;
+}
+.cate-sub-list{
+    width:800px;
+    height:500px;
+    /* background-color: chartreuse; */
+    position:absolute;
+    top:-8px;
+    left:200px;
+}
+.cate-sub-list{
+    display:none;
+    overflow: hidden;
+}
+.main-cate:hover .cate-sub-list{
+    display: block;
+}
+.main-cate:hover .cate-sub-list{
+    background-color: #fff;
+}
+.sub-list-left{
+    width:550px;
+    height:500px;
+    /* background-color: aqua; */
+    float:left;
+    padding: 10px 20px;
+}
+.sub-list-right{
+    width:200px;
+    height:500px;
+    /* background-color: #ff0036; */
+    float:right;
+}
+.list-left-row{
+    overflow: hidden;
+    margin:5px 0;
+    
+}
+.list-left-title{
+    width:90px;
+    font-size: 14px;
+    font-weight:700;
+    /* background-color: chocolate; */
+    float:left;
+    letter-spacing: 2px;
+}
+.list-left-content{
+    
+    width: 450px;
+    /* background-color: darkcyan; */
+    float:left;
+    border-bottom:1px dashed rgba(0,0,0,0.1);
+    color:#999;
+    padding-bottom:3px;
+    
+}
+ .list-left-row .list-left-content a{
+    color:#999;
+}
+.list-left-row .list-left-content .special-color{
+    color:#ff0036;
+}
+.list-left-content li{
+    margin-right:5px;
+    padding-left:4px;
+    float:left;
+}
+/* .list-lc li{
+    float:left;
+} */
+/* 轮播图开始*/
+.slide-box{
+    position: relative;
+    height: 500px;
+    
+}
+.slide-box a{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.slide-box img{
+    width: 1230px;
+    height: 500px;
+}
+/* .slide-btn-box{
+    width:200px;
+    height: 20px;
+    background-color: antiquewhite;
+    z-index: 3;
+    margin:0 auto;
+    
+} */
+.slide-btn-box{
+    position: absolute;
+    bottom:50px;
+    left:50%;
+    background: rgb(250, 250, 250,0);
+    width:200px;
+    
+    height:15px;
+    /* 已知宽度 */
+    /* margin-left:-100px; */
+    /* 不知道宽度  css3 transform: translateX(-50%); */
+    transform: translateX(-50%);
+
+}
+.slide-btn-box li{
+    float:left;
+    height:10px;
+    width:40px;
+    line-height: 10px;
+    background-color:#444;
+    margin-left:8px; 
+    margin-top:3px;
+    border-radius: 20%;
+
+}
+.slide-btn-box li:hover{
+    background-color: #fff;
+}
+/* 轮播图按钮--方法 */
+.slide-btn-box0{
+    height:30px;
+    width:200px;
+    background-color: yellow;
+    z-index: 2;
+
+}
+.brand-sale{
+    width:1230px;
+    margin:0 auto;
+    height:370px;
+    background-color:rgb(255,255,255);
+    margin-top:30px;
+
+}
+.brand-title{
+    font-family:  "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
+    height:50px;
+    background-color: #fff;
+    /* width: 234px; */
+}
+.brand-img01{
+    width: 234px;
+}
+.brand-list{
+    float:left;
+}
+.brand-list img:hover{
+    opacity:0.7;
+}
+.brand-title img{
+    width:18px;
+    height:18px;
+    float:right;
+    line-height: 50px;
+    margin-top:15px;
+    margin-right:5px;
+}
+.brand-title-cn{
+    font-size:18px;
+    font-weight: 700;
+    line-height: 50px;
+    color:#333;
+    margin-left:10px;
+}
+.brand-title-en{
+    font-weight: 700;
+    margin-left: 10px;
+}
+.brand-img01 .brand-img img {
+    width:234px;
+    height:315px;
+    display: block;
+}
+.brand-img02{
+    width:485px;
+}
+.brand-img02 .brand-img img{
+    width:485px;
+    height: 315px;
+    display: block;
+}
+.brand-img03{
+    width:485px;
+}
+.brand-img03 .brand-img img{
+    width:485px;
+    height: 315px;
+    display: block;
+}
+.brand-list{
+    margin-right:8px;
+}
+.brand-logo{
+    width:1230px;
+    height:180px;
+    background-color: rgb(241, 19, 193);
+    margin:0 auto;   
+}
+.brand-logo li{
+    width: 122px;
+    height: 108px;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    float:left;
+}
+.brand-logo li img{
+    width:82%;
+    height:50px;
+    display: block;
+    margin:0 auto;
+    margin-top:30px;
+}
+.brand-logo a{
+    position: absolute;
+    top:0px;
+    left:0px;
+    bottom: 0px;
+    right:0px;
+    /* width:100%;
+    height:100%; */
+    background-color: #333;
+    color:white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    text-decoration: none;
+}
+.brand-logo p{
+    text-align: center;
+    margin-top:35px;
+}
+/* 行内块元素居中，可以设置其父元素的text-align属性 */
+.brand-logo span{
+    display: inline-block;
+    background-color: #ff0036;
+    border-radius: 10px;
+    width:63px;
+    height:18px;
+    line-height: 18px;
+    margin-top:8px;
+}
+/* .brand-logo span{
+    display: block;
+    margin:0 auto;
+} */
+.brand-logo li:hover  a {
+    opacity: 0.9;
+}

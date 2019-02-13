@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a=Math.random();
+        // var b=Math.random();
+        // document.write(a>b?a:b);
+
+
+        // var date=new Date();
+
+        // var year=date.getFullYear();
+        // document.write("<br>"+year);
+
+        // date.setFullYear(2000);
+        // year=date.getFullYear();
+        // document.write("<br>"+year);
+
+        // if(year%400==0||((year%4==0)&&year%100!=0)){
+        //     document.write("<br>"+"今年为闰年");
+        // }
+        // else{
+        //     document.write("<br>"+"今年不是闰年"+"<br>");
+        // }
+
+        // var a;
+        // while(a==0){
+        //     document.write("a")
+        //     a--;
+        // }
+
+        // var age=prompt("请输入年龄");
+        // if(age<14)
+        // document.write("儿童");
+        // if(age>=14&&age<24)
+        // document.write("青少年");
+        // if(age>24&&age<40)
+        // document.write("青年");
+        // if(age>=40&&age<60)
+        // document.write("中年");
+        // if(age>=60)
+        // document.write("老年");
+
+        // var day=prompt("请输入数字");
+        // if(day==0)
+        // alert("星期日");
+        // if(day==1)
+        // alert("星期一");
+        // if(day==2)
+        // alert("星期二");
+        // if(day==3)
+        // alert("星期三");
+        // if(day==4)
+        // alert("星期四");
+        // if(day==5)
+        // alert("星期五");
+        // if(day==6)
+        // alert("星期六");
+        // var sum=1;
+        // for(var i=1;i<=10;i++)
+        // {
+        //     sum=sum*i;
+        // }
+        // document.write(sum);
+        // var sum = 1;
+        // var s=0;
+        // for (var i = 1; i <= 10; i++) {
+        //     for (var j = 1; j <= i; j++) {
+        //         sum = sum * j;
+        //     }
+
+        //     s = s + sum;
+        //     sum=1;
+        // }
+
+        // document.write(s);
+        // for (var i = 1; i <= 5; i++) {
+        //     for (var j = 1; j <= i; j++) {
+        //         document.write(j + " ");
+
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // for(var i=1;i<=5;i++){
+        //     for(var j=1;j<=5-i+1;j++){
+        //         document.write("&nbsp");
+        //     }
+        //     for(var j=1;j<=i;j++){
+        //         document.write("*"+"&nbsp");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // for (var i = 1; i < 1000; i++) {
+
+        //     if (i % 4 == 2 && i % 7 == 3 && i % 9 == 5)
+        //         document.write(i + "<br>");
+        // }
+
+        // for (var i = 1; i < 10000; i++) {
+        //     var a = parseInt(i / 1000);
+        //     var b = parseInt(i % 1000 / 100);
+        //     var c = parseInt(i % 100 / 10);
+        //     if (i % 13 == 0 && a == b + c)
+        //         document.write(i + "<br>");
+        // }
+
+
+        // var n, i, j, s = 0, k = 1;
+        // n = prompt("请输入值");
+        // for (i = 1; i <= n; i++) {
+        //     s = s + (1 / (2 * i - 1)) * k;
+
+        //     k = k * (-1);
+        // }
+        // document.write(4 * s+ "<br>");
+
+
+
+        // var arr = new Array(n);
+        //斐波纳挈数列非递归：
+        // for ( j = 0; j < n; j++) {
+
+
+        //     if (j == 0)
+        //         arr[j] = 1;
+        //     else if (j == 1)
+        //         arr[j] = 1;
+
+        //或者if)(j<=1)
+        //arr[j]=1;
+
+
+        //     else
+        //         arr[j] = arr[j - 1] + arr[j - 2];
+
+
+        // }
+        // document.write(arr[n-1]);
+
+        //斐波那契数列递归：
+        // n = prompt("请输入值");
+        // var arr = new Array(n);
+        // function fib(n) {
+        //     if (n <= 2)
+        //         return 1;
+        //     else
+        //         return fib(n - 1) + fib(n - 2);
+        // }
+        // document.write(fib(n));
+
+
+        //         var n = prompt("请输入");
+        //         var s = 0;
+        //         function lucky(m) {
+
+        //             for (var i = 0; i < m; i++) {
+        //                 var j=0;
+        //                 var a = Math.random();
+        //                 a = parseInt(a * 9 % 10) + 1;
+        //                 var b = Math.random();
+        //                 b = parseInt(b * 9 % 10) + 1;
+        //                 var c = Math.random();
+        //                 c = parseInt(c * 9 % 10) + 1;
+        //                 if (a == 8)
+        //                     j++;
+        //                 if (b == 8)
+        //                     j++;
+        //                 if (c == 8)
+        //                     j++;
+        //                 if (a == 8 || b == 8 || c == 8)
+        //                     s++;
+        //                 document.write(a + " " + b + " " + c + " " + "<br>");
+        //                 document.write((j / 3).toFixed(2)+"<br>");
+        //             }
+        //             document.write("总的胜率为" + (s / m).toFixed(2));
+        //         }
+
+        // lucky(n);
+
+
+        // var j = 0;
+        // var s = 0;
+        // var str = "";
+        // function lucky() {
+        //     var i = 0;
+        //     var a = Math.random();
+        //     a = parseInt(a * 9 % 10) + 1;
+        //     var b = Math.random();
+        //     b = parseInt(b * 9 % 10) + 1;
+        //     var c = Math.random();
+        //     c = parseInt(c * 9 % 10) + 1;
+        //     if (a == 8 || b == 8 || c == 8)
+        //         j++;
+        //     if (a == 8)
+        //         i++;
+        //     if (b == 8)
+        //         i++;
+        //     if (c == 8)
+        //         i++;
+        //     if (i > 0)
+        //         str = "数字为："+a+b+c+"赢了，胜率为" + (i / 3).toFixed(2);
+        //     else
+        //         str ="数字为：" +a+b+c+ "输了，胜率为0";
+        // }
+        // do {
+        //     lucky();
+        //     s++;
+        // } while (confirm(str));
+        // alert("总胜率为" + (j / s).toFixed(2));
+
+
+        // 4.	编制一个从字符串中收集数字字符（"0"',"1"，…"9"）的函数CollectDigits(s)，
+        // 它从字符串s中顺序取出数字，并且合并为一个独立的字符串作为函数的返回值。
+        // 例如函数调用CollectDigits("1abc23def4"）的返回值是字符串"1234"。
+
+        // var n = prompt("请输入");
+        // function number(m) {
+        //     var s;
+        //     var str = ""
+        //     for (var i = 0; i < m.length; i++) {
+        //         if (m.charAt(i) >= 0 && m.charAt(i) <= 9)
+        //             str += m.charAt(i);
+        //     }
+        //     return str;
+        // }
+        // document.write(number(n));
+
+        // 5.	编制一个将两个字符串交叉合并的函数Merge(s1, s2) ，
+        // 例如Merge("123", "abc"）的返回结果是"1a2b3c"，
+        // 如果两个字符串的长度不同，那么就将多余部分直接合并到结果字符串的末尾，
+        // 如Merge("123456", ''abc''）的返回结果是”1a2b3c456”。
+
+        // function merge(s1, s2) {
+        //     var str = "";
+        //     var x = Math.max(s1.length, s2.length);
+        //     for (var i = 0; i < x; i++) {
+        //         if (i < s1.length)
+        //             str += s1.charAt(i);
+        //         if (i < s2.length)
+        //             str += s2.charAt(i);
+        //     }
+        //     return str;
+        // }
+        // document.write( merge("1231233", "dawsd"));
+
+// 
+//         8.	设计一个函数DayOfYear(d) ，它接必一个日期参数d，返回一个该日期是所在年份的第几天，
+//         如DayOfYear(2000, 2, 8)的返回值是39.
+//         （提示：①定义一个数组months = new Array（31, 28, 31, 30, 31, 30, 31, 31, 30, 31，30, 31）记录每个月少天：
+//         ②定义一个辅助函数IsLeapYear(y)判定某个年份是否闰年，以确定2月份的天数是28还是29。）
+
+       var months = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31,30, 31);
+        function dayofyear(d){
+            var da=0;
+            d=d.split(",");
+            d[1]=parseInt(d[1]);
+            d[2]=parseInt(d[2]);
+            d[0]=parseInt(d[0]);
+            if(d[0]%400==0||((d[0]%4==0)&&d[0]%100!=0))
+            months[1]=29;
+            for(var i=0;i<d[1]-1;i++){
+                da+=months[i];
+            }
+            da+=d[2];
+            return da;
+        }      
+       document.write(dayofyear("2000,2,8"));
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="school">
+        <option value="aa">黑大</option>
+        <option value="bb">理工</option>
+        <option value="cc">林大</option>
+    </select>
+    <script src='jquery-3.3.1.min.js'></script>
+    <script>
+        $('#school').on('change', function () {
+            console.log($(this).val());
+        })
+        //一个元素的值改变的时候将触发change事件。
+        // 此事件仅限用于<input>元素，<textarea>和<select>元素。
+        $(document).on('keyup', function (e) {
+            console.log(e.which);
+        })
+    </script>
+</body>
+
+</html>

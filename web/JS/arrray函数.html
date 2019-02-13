@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //concat:连接数组，返回新的数组
+        var a=[1,2,3];
+        var b=[4,5,6];
+        var c=a.concat(b);
+        document.write(c+"<br>");
+        
+        //join():转换成字符串
+        document.write(a.join("--")+"<br>");
+        //pop():删除并返回数组的最后一个元素
+        //shift():删除并返回数组的第一个元素
+
+        //push():向数组末尾添加一个或多个元素，并返回新数组的长度
+        //unshift:向数组开头添加一个或多个数组，并返回新数组的长度
+
+        //reverse():将原数组颠倒后输出
+        //slice()：截取数组-slice（start位置，end位置（前一个）），end可有可无；
+
+        //sort():排序，首字符先比较大小，若一样则比较第二个，依次类推
+        var d=["12","34","3","24","0"];
+        //从小到大排序
+        // document.write(d.sort(function (x,y)
+        // {
+        //     return x-y;
+        // }))
+        //从大到小排序
+        // document.write(d.sort(function (x,y)
+        // {
+        //     return y-x;
+        // }))
+
+        //快速复制数组，但新数组会随着旧数组的改变而改变；
+        // function a(x,y){
+        //     return x-y;
+        // }
+        // var e=[];
+        // e=d.copyWithin();
+        // d[0]=0;
+        // document.write(e);
+
+        //splice:arrayObject.splice(index,howmany,item1,.....,itemX)
+        //参数	描述
+        //index	: 必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。
+        //howmany :	必需。要删除的项目数量。如果设置为 0，则不会删除项目。
+        //item1, ..., itemX	: 可选。向数组添加的新项目。
+        var s1=[1,2,3,4,5];
+        s1.splice(2,2,8,9);
+        document.write(s1+"<br>");
+        //删除添加同时进行，或者只删除不添加，或只加不删(第二个数字为0)；
+        var s2=[4,5,6,7,8];
+        s2.splice(2,3);
+        document.write(s2);
+        
+    </script>
+</body>
+</html>

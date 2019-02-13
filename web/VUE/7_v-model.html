@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="msg">
+        <h1>{{msg}}</h1>
+        <input type="radio" v-model="sex" value="boy">boy
+        <input type="radio" v-model="sex" value="girl">girl
+        <br>
+        <input type="checkbox" v-model="hobby" value="playball">playball
+        <input type="checkbox" v-model="hobby" value="foot">football
+        <br>
+        <select name="" id="" v-model="sel" multiple="multiple">
+            <option value="1111">1111</option>
+            <option value="2222">2222</option>
+            <option value="3333">3333</option>
+        </select>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                msg:"hello",
+                sex:"boy",
+                hobby:[],
+                sel:'3333'
+            }
+            
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.head{
+    width:100%;
+    background:#06c1ae;
+    height:1.01rem;
+    margin:0 auto;
+    display: -webkit-flex;
+    
+}
+#h-left{
+    margin-top:0.005rem;
+    width:1.6rem;
+    height:1rem;
+    /* background: gold; */
+    background: #06c1ae;
+    font-size:0.3rem;
+    line-height:1rem;
+    text-align: center;
+    color:whitesmoke;
+  }
+
+#h-center{
+   /* width:2rem; */
+  
+    height:1rem;
+    /* background: red; */
+   
+    flex-grow: 1;
+    margin: 0 0.1rem; 
+    margin-top:0.005rem;
+   
+}
+#h-right{
+    margin-top:0.005rem;
+    width:1.2rem;
+    height:1rem;
+    /* background: gold; */
+    background: #06c1ae;
+    font-size:0.3rem;  
+     text-align: center;
+     color:whitesmoke;
+}
+.jt{
+  
+    font-size:0.3rem;
+    line-height: 0.7rem;
+    display: block;
+    margin: 0.15rem 0.005rem 0;
+    color:whitesmoke;
+    height:0.7rem;
+    background:teal;
+    opacity: 0.6
+    /* background: red; */
+}
+.jt input{
+    width:2.7rem;
+    height: 0.4rem;
+    margin: 0 0.005rem;
+    font-size:0.3rem;
+    background:teal;
+    
+    border-color:transparent;
+    color:whitesmoke;
+}
+.tx{
+    font-size:0.3rem;
+    display: block;
+    margin-top:0.15rem;
+    color:whitesmoke;
+}
+.img img{
+    width:100%;
+}
+
+
+
+
+
+
+
+
+.list{
+    position: relative;
+    width:6.4rem;
+}
+.lunbo{
+    position: absolute;
+    left:0rem;
+    border-top:0.01rem solid red;
+    height:4rem;
+    overflow: hidden;
+   width:12.8rem;
+}
+.img1 {
+    float:left;
+    overflow: hidden;
+    margin-top:0rem;
+    height:3.5rem;
+}
+.lunbo ul{
+    list-style: none; 
+    width:6.4rem;
+}
+.lunbo ul li{
+    float:left;
+    width:1rem;
+    height:1rem;
+    border-radius: 0.5rem;
+    background: wheat;
+    text-align: center;
+    margin:0.3rem 0.14rem;
+
+}
+li .iconfont{
+   font-size:0.5rem;
+   display: block;
+   margin:0.25rem auto 0.25rem;
+    color:aliceblue;
+}
+.lunbo li {
+   font-size:0.25rem;
+   color:darkslategrey;
+}
+
+
+
+
+
+
+
+#btn li{
+    width:0.3rem;
+    height:0.3rem;
+    float: left;
+    /* background: wheat; */
+    border-radius:0.15rem;
+    -webkit-border-radius:0.15rem;
+    -moz-border-radius:0.15rem;
+    -ms-border-radius:0.15rem;
+    -o-border-radius:0.15rem;
+    margin: 0 0.15rem;
+}
+#btn{
+    width:1.2rem;
+    position: absolute;
+    top:3.4rem;
+    left:2.6rem;
+    /* background: red; */
+    overflow: hidden;
+    /* margin-left:2.6rem; */
+    
+}
+.active{
+     background:#06c1ae;
+}
+

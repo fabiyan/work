@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #d0{
+            height:300px;
+            width:400px;
+            background-color: darkslategrey;
+            left:200px;
+            top :200px;
+            position: absolute;
+           
+        }
+        #d0 div{
+            display: inline-block;
+        }
+        #d1{
+            background-color: aquamarine;
+            height:100px;
+            width:100px;
+            /* float :left; */
+            
+           
+        }
+        #d2{
+            background-color: black;
+            height:100px;
+            width:100px;
+            /* float :left; */
+            position: relative;
+            left:50px;
+            top:20px;
+           
+           
+        }
+        #d3{
+            background-color: cornflowerblue;
+            height:100px;
+            width:100px;
+            /* float :left; */
+            position:absolute;
+            left:50px;
+            top:20px;
+           
+        }
+      /* 
+        position：
+            relative： 相对定位，相对于自身原来的位置，定位后空间不释放。
+            absolute:  绝对定位，相对于距自己最近的已定位的祖先元素，若无已定位的祖先元素，则相对于body，定位后空间释放。
+            fixed：    固定定位，相对于浏览器，定位后空间释放。
+      
+      
+      */
+    </style>
+</head>
+<body>
+    <div id="d0">
+        <div id="d1">111</div>
+        <!-- 块之间的边距因为div的回车换行产生。 -->
+        <div id="d2">222</div>
+        <div id="d3">333</div>
+    </div>
+</body>
+</html>

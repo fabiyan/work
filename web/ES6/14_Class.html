@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       class Person{
+           constructor(name,age){
+            this.name=name;
+            this.age=age ;
+            }
+            say(){
+                console.log(this.name);
+            }
+       }
+       let p1=new Person('lisi',20)
+       p1.say();
+
+       class coder extends Person{
+           constructor(name,age,h){
+               super(name,age,h);
+           }
+           write(){
+               console.log(this.name);
+           }
+           //静态方法，只能通过构造函数（class）名.方法去调用
+           static op(){
+               console.log('写写写写写写');
+           }
+
+       }
+
+       let c1=new coder('ww',33,180)
+       c1.write();
+       coder.op();
+
+    </script>
+</body>
+</html>

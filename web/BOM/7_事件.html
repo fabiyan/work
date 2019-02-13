@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="con">
+hello world!
+    </div>
+    <script>
+        // 事件的三要素：事件源，事件函数，事件
+        var oCon = document.getElementById("con");
+       oCon.onclick= function (e){
+             //获取事件源
+           console.log( e.target);
+        // 获取事件(即鼠标)此时距离浏览器左边和上边的距离
+           console.log(e.clientX);
+           console.log(e.clientY);
+        }
+    </script>
+</body>
+</html>

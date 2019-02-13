@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: brown;       }
+    </style>
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+    <button id="hd">hide</button>
+    <button id="sh">show</button>
+    <button id="to">toggle</button>
+    <button id="an">animate</button>
+    <button id="st">stop</button>
+    <script src='jquery-3.3.1.min.js'></script>
+    <script>
+        $('#hd').on('click',function(){
+            $('#div1').hide(0);
+        })
+        $('#sh').on('click',function(){
+            $('#div1').show(1000);
+        })
+        $('#to').on('click',function(){
+            $('#div1').toggle(1000);
+        })
+        // $('#an').on('click',function(){
+        //     $('#div1').animate({
+        //         height:300,
+        //         opacity:0.5
+        //     },3000)
+        // })
+        $('#an').on('click',function(){
+            $('#div1').animate({height:300},3000).animate({opacity:0.5},3000);
+        })//有执行顺序
+
+        $('#st').on('click',function(){
+
+            stop(true/false,true/false)
+            // 第一个参数代表是否清除队列，默认为false
+            // 第二个代表当前动画是否跳转到最后，默认为false
+            $('#div1').stop(true,false);
+        })
+    </script>
+</body>
+</html>

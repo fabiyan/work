@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function Person1(name,age){
+           this.name=name,
+           this.age=age
+        //    this.eat=function(){
+        //        console.log(this.name+'吃吃吃吃吃吃吃');
+        //    }
+        // 若将eat写在Person1中，则每次new一个新的Person1对象，
+        // 都要将eat复制一遍，太占内存和运行时间，故用构造函数的prototype属性，如下
+       }
+       Person1.prototype.eat=function(){
+           console.log(this.name+'吃吃吃吃吃吃吃');
+       }
+
+       let p1=new Person1('zs',20);
+       p1.eat();
+
+       function Coder(h,name,age){
+           this.height=h,
+            // 子类中 通过父类.call(this) 继承属性
+            Person1.call(this,name,age)
+            console.log(this);
+       }
+        // 通过子类.prototype = 父类的实例化对象   来继承方法
+       Coder.prototype=new Person1();
+       Coder.prototype.constructor=Coder;
+       let c1=new Coder(180,'lisi',33);
+       c1.eat();
+
+    </script>
+</body>
+</html>

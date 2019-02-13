@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .pre{
+            width:100px;
+            height:160px;
+            line-height:5px;
+        }
+        .aa{
+            float:left;
+        }
+        .cli{
+            background: gray;
+            width:200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="div1" class="aa">
+       <select name="" id="se1" class="pre" multiple='multiple'>
+           <!-- multiple:将select的所有选项同时显示 -->
+           <option value="">选项一</option>
+           <option value="">选项二</option>
+           <option value="">选项三</option>
+           <option value="">选项四</option>
+           <option value="">选项五</option>
+           <option value="">选项六</option>
+           <option value="">选项七</option>
+       </select>
+        <div class="cli" id="sel1">选中添加</div>
+        <div class="cli" id="sel2">全部添加</div>
+    </div>
+    <div id="div2" class="aa">
+            <select name="" id="se2" class="pre" multiple='multiple'>
+                </select>
+            <div class="cli" id="sel3">删除添加</div>
+            <div class="cli" id="sel4">全部删除</div>
+        </div>
+        <script src='jquery-3.3.1.min.js'></script>
+        <script>
+            $('#sel1').on("click",function(){
+                $('select option:selected').appendTo($('#se2'));
+                $('select option').prop("selected",false);
+            })
+            $('#se1').on("dblclick",function(){
+                $('select option:selected').appendTo($('#se2'));
+                $('select option').prop("selected",false);
+            })
+            $('#sel2').on("click",function(){
+                $('select option').appendTo($('#se2'));
+                $('select option').prop("selected",false);
+            })
+
+            $('#sel3').on("click",function(){
+                $('select option:selected').appendTo($('#se1'));
+                $('select option').prop("selected",false);
+            })
+            $('#sel4').on("click",function(){
+                $('select option').appendTo($('#se1'));
+                $('select option').prop("selected",false);
+            })
+        </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="div1">hello world
+        <ul>
+            <li>111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+    </div>
+    <script>
+        // 获取节点
+        // document.getElementById();
+        // document.getElementsByClassName();
+        // document.getElementsByName();
+        // document.getElementsByTagName();
+
+        //html5新增两种
+        // var a=document.querySelector("#div1");//适用于元素只有一个的时候，
+        //                          // 或者取id时为('#idname'),取class时为('.classname');
+        // var b=document.querySelectorAll('li');//适用于取较多的元素的时候
+        // console.log(b[0].innerHTML);
+
+        // 操作节点
+        // document.createElement()//创建节点
+        // document.removechild()//删除节点，需要找到父元素
+        // document.appendChild()//将节点添加到某父元素内部的最后
+        // document.replaceChild(new,old)//替换节点
+        // document.insertBefore(new,exist);//插入某节点的前边 
+        // document.cloneNode()//克隆某节点，括号里空，代表浅克隆，为true代表深克隆
+
+        // 节点遍历
+        // document.nextSibling//找到此节点的下一个兄弟节点，其中空格和回车换行也算下一个文本节点
+        // document.nextElementSibling//忽略其中的回车换行
+        // 方法封装
+        function next(elem){
+           do{
+               elem=elem.nextSibling;
+           } while(elem&&elem.nodeType!=1)
+        }
+
+        // document.previousSibling//找到此节点的上一个兄弟节点，其中空格和回车换行也算上一个文本节点
+        // document.previousElementSibling//忽略其中的回车换行
+
+        // document.firstChild//此节点的第一个孩子节点，其中此节点与第一个孩子节点之间的回车换行和空格，
+        //                    // 也算一个孩子节点，为文本节点
+        // document.firstElementChild//忽略其中的回车换行
+        //方法封装
+        function first(elem){
+            elem=elem.firstChild;
+            if(elem.nodeType==1){
+                  return elem;
+            }else{
+                    return next(elem)
+            }
+        }
+
+        // document.lastChild//此节点的最后一个孩子节点，其中此节点与最后一个孩子节点之间的回车换行和空格，
+        //                    // 也算一个孩子节点，为文本节点
+        // document.lastElementChild//忽略其中的回车换行
+
+        // document.children//找到此节点的所有儿子节点。
+
+
+        //属性操作
+        // 设置新属性：document.setAttribute(name,value);
+        // 得到属性值：document.getAttribute(name);
+
+      </script>
+</body>
+</html>

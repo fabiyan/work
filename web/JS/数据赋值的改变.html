@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 基本数据类型 -->
+    <!-- 当数据为基本类型时： -->
+    <!-- // var a = 10;
+        // var b = a;
+
+        // a = 20;
+
+        // console.log(b);
+        此时b的值还是10，不会因为a的重新赋值而改变
+    -->
+    <!-- 引用数据类型：数组，对象 -->
+    <!-- 当为引用数据类型时： -->
+    <!--  // var person1 = {
+        //     name:'zs',
+        //     age:18
+        // }   
+        // var person2 = person1;
+        // person2.name = "zw";
+        // console.log(person1.name);此时值为zw
+        ------------------------------------------------------------
+        // var arr1 = [1,2,3];
+        // var arr2 = arr1;
+        // arr1[0] = 5;
+        // console.log(arr2);此时值为5,2,3
+    因为数组和对象的具体操作对象存在于堆中，而变量本身存于栈中，栈中的值为堆的地址，
+    故当var person2 = person1和var arr2 = arr1，他们得到是变量堆的地址，
+    故当旧变量的内容改变时，新变量的也随之改变，或者说新旧变量共用一个堆内存，指向相同
+-->
+</body>
+</html>

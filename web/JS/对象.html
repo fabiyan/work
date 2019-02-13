@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            name: "tom",
+            height: 170,
+            age: 19,
+            blood: "a",
+            play: function () {
+                document.write(this.name + "你好");
+            }
+        }
+        person.play();
+        var person1 = new Object();
+        person1.name = "hub";
+        person1.age = 18;
+        person1.blood = "o";
+        person1.play = function () {
+            document.write("你好");
+        }
+        document.write(person1.name);
+        person1.play();
+    </script>
+</body>
+
+</html>

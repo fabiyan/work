@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+    <input type="text" v-model="msg" @keyup="search()">
+    <button id="btn" v-on:click="add()">add</button>
+    <ul>
+        <li v-for="(obj,index) in show" :class="{active:obj.isA}" @click="change(index)">{{obj.value}} <button v-on:click="del(obj)">del</button></li>
+    </ul>
+</div>
+    <script src="../vue.js"></script>
+  
+    <script>
+       
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                list:[],
+                show:[],  
+                msg:''
+            },
+            // methods: {
+            //     add(){
+            //          var oLi=document.getElementById('lli');
+            //         var newNode=document.createElement('li');
+            //         newNode.innerHTML=this.msg;
+            //         oLi.appendChild(newNode);
+            //     }
+                methods: {
+                    add(){
+                        
+                        this.list.push({value:this.msg,isA:false});
+                        this.msg="";
+                        // this.show=this.list  这样赋值两个数组指向同一个地址，
+                        // 以后若是list数组改变，则show数组也会跟着改变
+                        this.show=[...this.list];
+                    },
+                    del(index){
+                        this.list.splice(index,1);
+                        this.show=[...this.list];
+                    },
+                    change(index){
+                        // obj.isA=!obj.isA;
+                        this.list[index].isA=!this.list[index].isA;
+
+                    },
+                    search(){
+                        var arr=this.list.filter((obj,index)=>{
+                       
+                            //若用function。则此时this是Windows，故改成=》，找到this的父元素vue
+                            return obj.value.includes(this.msg);
+                        })
+                        this.show=arr;
+
+                    }
+                
+                }
+               
+        })
+    </script>
+</body>
+</html>

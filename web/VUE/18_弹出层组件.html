@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       #container{
+            width: 300px;
+            height:400px;
+            border:1px solid #000;
+        }
+        #title span{
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="login">登陆</button>
+        <button @click="logout">注册</button>
+        <mylog title="登陆" v-show="loggin" @hidden="hide">
+            <label for="username"> 用户名：</label>
+           <input type="text" id="username"><br>
+           <label for="pwd">密码：</label>
+            <input type="password" id="pwd"><br>
+            <button>登录</button>
+        </mylog>
+        <mylog title="注册" v-show="loggout" @hidden="hide">
+                <label for="username"> 用户名：</label>
+               <input type="text" id="username"><br>
+               <label for="pwd">密码：</label>
+                <input type="password" id="pwd"><br>
+                <label for="pwd">确认密码：</label>
+                <input type="password" id="pwd"><br>
+                <button>登录</button>
+            </mylog>
+    </div>
+    <template id="temp">
+        <div id="container">
+            <div id="title">
+                {{title}}
+                <span @click="$emit('hidden', title)">[X]</span>
+                <!-- 此处的title继承的是父组件mylog 中的title属性,是mylog的hide的函数中的实参 -->
+            </div>
+            <div id="content">
+                <slot></slot>
+            </div>
+        </div>
+    </template>
+    <script src="vue.js"></script>
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                loggin:false,
+                loggout:false
+
+            },
+            methods: {
+                login(){
+                    this.loggin=true;
+                    this.loggout=false;
+                },
+                logout(){
+                    this.loggin=false;
+                    this.loggout=true;
+                },
+                hide(title){
+                    this.loggin=false;
+                    this.loggout=false;
+
+                }
+            },
+            components:{
+                'mylog':{
+                    template:"#temp",
+                    props:['title']
+                }
+            }
+        })
+    </script>
+</body>
+</html>

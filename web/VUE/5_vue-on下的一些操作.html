@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="div1" @click="change1()">
+            <!-- <div id="div2" @click="change2()"> -->
+     <!-- 阻止事件冒泡 -->
+                <div id="div2" @click.stop="change2($event) "></div>
+                <!-- $event为实参，不能改变 -->
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                count:0
+            },
+            methods:{
+                change1(){
+                    console.log('1111');
+                    console.log(event);
+                },
+                change2(e){
+                    console.log('2222');
+                    console.log(e);
+
+                }
+            }
+        })
+
+
+
+        /*
+        <!-- 阻止单击事件冒泡 -->
+<a v-on:click.stop="doThis"></a>
+<!-- 提交事件不再重载页面 -->
+<form v-on:submit.prevent="onSubmit"></form>
+<!-- 修饰符可以串联  -->
+<a v-on:click.stop.prevent="doThat"></a>
+<!-- 只有修饰符 -->
+<form v-on:submit.prevent></form>
+<!-- 添加事件侦听器时使用事件捕获模式 -->
+<div v-on:click.capture="doThis">...</div>
+<!-- 只当事件在该元素本身（而不是子元素）触发时触发回调 -->
+<div v-on:click.self="doThat">...</div>
+*/
+    </script>
+</body>
+</html>

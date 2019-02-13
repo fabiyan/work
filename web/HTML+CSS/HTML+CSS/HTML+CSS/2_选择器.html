@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 选择和 h1 相邻的兄弟元素，且必须同属于一个父元素 */
+        h1 + p {
+            background: #0f0;
+
+        }
+        /* 选择和 h1 的所有兄弟元素，且必须属于同一个父级元素 */
+        h1 ~ p{
+            color:red;
+        }
+        /*  选择div的后代里 p 的属性里有class的元素*/
+    div#qq p[class]{
+        color:blue;
+    }
+    /* 选择div的后代里  p 的属性里有class且class的值为bb的元素 */
+    div#qq p[class="bb"]{
+        background: black;
+    }
+    li:first-child{
+          color:yellow;
+    }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>sadasd</h1>
+        <p>1111111</p>
+        <p>2222222</p>
+        <p>3333333</p>
+        <p>4444444</p>
+        <p>5555555</p>
+    </div>
+    <div id="qq">
+        <h1>eqwewq</h1>
+        <p>sdasdasd</p>
+        <p class="aa">2222222</p>
+        <p class="bb">2333333333333</p>
+        <p>4444444444444</p>
+        <p>5555555555555</p>
+
+    </div>
+    <ul>
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+    </ul>
+    <!-- E F:选择E的所有后代为F的元素-->
+    <!-- E > F：选择E的所有子代为F的元素-->
+    <!-- E + F：选择和E相邻的为F的兄弟元素 ，父元素必须相同 -->
+    <!-- E ~ F：选择和E的所有的为F的兄弟元素 ，父元素必须相同-->
+    <!-- E[Alt] ：选择E的属性中含有Alt的的元素-->
+    <!-- E[Alt=“AA”]：选择E的属性中含有Alt且Alt的值为AA的元素-->
+    <!-- E[Alt^="AA"]：选择E的属性中含有Alt且属性值以AA开头的元素 -->
+    <!-- E[Alt$=“AA”]：选择E的属性中含有Alt且其属性值以AA结尾的元素 -->
+    <!-- E[Alt*=“AA”]：选择E的属性中含有Alt且属性值含有AA的元素 -->
+    <!-- E[Alt|=“AA”]：选择E的属性中含有Alt且属性值以AA开头或者属性值以AA-开头的元素-->
+    <!-- E[Alt~=“AA"]：选择E的属性值为Alt且属性值包含单词AA的元素 -->
+    <!-- E：first-letter：选择每一个E元素的第一个字母 -->
+    <!-- E：first-line：选择每一个元素的第一行 -->
+    <!-- E：first-child：选择只有当E为父级元素时的第一个元素 -->
+    <!-- E：last-child：选择只有当E为父级元素的最后一个元素 -->
+    <!-- E：nth-child(X)
+        1：当x为数字时，表示选中E为父级元素的第X个元素
+        2：当X为2n时，表示选中E为父级元素的偶数个元素
+        3：当X为2n+1时，表示选中E为父级元素的奇数个元素
+    -->
+    <!-- E：nth-last-child：与nth相同，只不过从倒数开始 -->
+    <!-- 
+      E:first-of-type
+      E:last-of-type
+      E:only-of-type
+      E:nth-of-type(n)
+      E:nth-last-of-type(n)
+      用法与child相似
+     -->
+</body>
+</html>

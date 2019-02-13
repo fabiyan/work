@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="app">
+       
+    <div>是否需要额外付费设施: <input type="checkbox" v-model="flag" @click="fn"></div>
+    <!-- <ul :class="{act:isA}" v-show="isA">
+        <li v-for="(obj,index) in list"> {{obj.name}}({{obj.value}})<input type="checkbox"></li>
+    </ul> -->
+    <ul v-if="flag">
+            <li v-for="(obj,index) in list"> {{obj.name}}({{obj.value}})
+                <input type="checkbox" v-model="buy" :value="obj"></li>
+        </ul>
+    订单费用信息
+    <ul>
+        <li v-for="(obj,index) in buy"> {{obj.name}}({{obj.value}})</li>
+    </ul>
+    <div>total:{{total()}}</div>
+    </div>
+    <script src="../vue.js"></script>
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                list:[{
+                    name:"沙发",
+                    value:1000
+                },
+                {
+                    name:"床",
+                    value:500
+                },
+                {
+                    name:"wifi",
+                    value:10
+                }],
+                buy:[{
+                    name:'别墅',
+                    value:50
+                }],
+                flag:false
+            },
+            methods: {
+            total(){
+                let count=0;
+                this.buy.forEach((obj,index) => {
+                    count+=obj.value;
+                });
+                return count;
+            },
+            fn(){
+                this.buy.splice(1);
+            }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        body{
+            display: -webkit-flex;
+        }
+        /* 方法一*/
+        /* .left{
+            width:200px;
+            height: 200px;
+            background: red;
+            float:left;
+        }
+        .right{
+            width:100%;
+            height:200px;
+            background: blue; 
+        }*/
+
+        /* 方法二 */
+        /* .left{
+            width:200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .right{
+            width:100%;
+            height:200px;
+            background: blue;
+            position: absolute;
+            left:210px;
+            top:0;
+            也可以不定位，直接
+            margin-left:210px;
+            margin-top:0px;
+        } */
+
+        /* 方法三 */
+        .left{
+            width:200px;
+            height: 200px;
+            background: red;
+        }
+        .right{
+            /* width:100%; */
+            height:200px;
+            background: blue;
+            flex-grow: 1;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="right"></div>
+</body>
+</html>

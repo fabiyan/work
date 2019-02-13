@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="iconfont.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo2.css">
+</head>
+
+<body>
+    <div class='head'>
+        <div id='h-left'>哈尔滨 &or;</div>
+        <div id='h-center'><i class='iconfont jt'>&#xe605;<input type="text" value="输入商家/品类/商圈"></i></div>
+        <div id='h-right'><i class='iconfont tx'>&#xe602;</i>我的</div>
+    </div>
+
+    <div class="img">
+        <img src="eat.png" alt="">
+    </div>
+    <div class="list">
+        <div class="lunbo">
+
+            <ul class="img1">
+                <a href="http://www.baidu.com">
+                    <li style="background: #fd9d21"><i class="iconfont">&#xe62b;</i>美食</li>
+                </a>
+                <a href="">
+                    <li style="background: #ff6767"><i class="iconfont">&#xe67d;</i>美食</li>
+                </a>
+                <a>
+                    <li style="background: #8a90fa"><i class="iconfont">&#xe614;</i>美食</li>
+                </a>
+                <a href="">
+                    <li style="background: #fed030"><i class="iconfont">&#xe671;</i>美食</li>
+                </a>
+                <a href="">
+                    <li style="background: #fd9d21"><i class="iconfont">&#xe622;</i>美食</li>
+                </a>
+
+                <a href="">
+                    <li style="background: #fed030"><i class="iconfont">&#xe603;</i>美食</li>
+                </a>
+                <a href="">
+                    <li style="background: #4dc6ee"><i class="iconfont">&#xe8a2;</i>美食</li>
+                </a>
+                <a href="">
+                    <li style="background: #ff80c2"><i class="iconfont">&#xe66c;</i>美食</li>
+                </a>
+                <a href="">
+                    <li style="background: #fd9d21"><i class="iconfont">&#xe613;</i>美食</li>
+                </a>
+                <a href="">
+                    <li style="background: #599eec"><i class="iconfont">&#xe621;</i>美食</li>
+                </a>
+            </ul>
+
+
+            <ul class="img1">
+                <a href="http://www.baidu.com">
+                    <li style="background: #fd9d21"><i class="iconfont">&#xe62b;</i>KTV</li>
+                </a>
+                <a href="">
+                    <li style="background: #ff6767"><i class="iconfont">&#xe67d;</i>KTV</li>
+                </a>
+                <a>
+                    <li style="background: #8a90fa"><i class="iconfont">&#xe614;</i>KTV</li>
+                </a>
+                <a href="">
+                    <li style="background: #fed030"><i class="iconfont">&#xe671;</i>KTV</li>
+                </a>
+                <a href="">
+                    <li style="background: #fd9d21"><i class="iconfont">&#xe622;</i>KTV</li>
+                </a>
+
+                <a href="">
+                    <li style="background: #fed030"><i class="iconfont">&#xe603;</i>KTV</li>
+                </a>
+                <a href="">
+                    <li style="background: #4dc6ee"><i class="iconfont">&#xe8a2;</i>KTV</li>
+                </a>
+                <a href="">
+                    <li style="background: #ff80c2"><i class="iconfont">&#xe66c;</i>KTV</li>
+                </a>
+                <a href="">
+                    <li style="background: #fd9d21"><i class="iconfont">&#xe613;</i>KTV</li>
+                </a>
+                <a href="">
+                    <li style="background: #599eec"><i class="iconfont">&#xe621;</i>KTV</li>
+                </a>
+            </ul>
+
+
+        </div>
+        <div id="btn">
+            <ul>
+                <li class="active bn"></li>
+                <li class="bn"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src='rem1.js'></script>
+<script src="jquery-1.12.4.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    var $wid;
+    var $num;
+    $("#btn li").on('click', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+      
+        $wid = $('.lunbo ul').eq(0).width();
+     
+        $num = $(this).index();
+        $('.lunbo').animate({
+            left: -$wid * $num
+        }, 800);
+    })
+
+    
+</script>
+
+
+</html>

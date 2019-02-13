@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id='ul'>
+        <li>1111</li>
+        <li>2222</li>
+    </ul>
+    <button id='btn'>add</button>
+    <script>
+        var oLi = document.getElementsByTagName("li");
+        var oBtn = document.getElementById('btn');
+        var oUl = document.getElementById('ul');
+        oBtn.onclick = function () {
+            var newli = document.createElement("li");
+            newli.innerHTML = Math.random();
+            oUl.appendChild(newli);
+            
+
+        }
+        // for (var i = 0; i < oLi.length; i++) {
+        //     oLi[i].onclick = function () {
+        //         console.log(this.innerHTML);
+        //     }
+        // }
+        //此结果为点击add添加后的数不能显示在控制台
+
+        // 此情况可用事件委托解决
+        // 解决后生成元素 事件绑定 问题
+
+        // 事件委托：原理利用事件冒泡（从最深的节点开始，然后逐步向上传播事件​​​​​​​),
+        // 只在他们的父元素上指定一个事件处理程序，就可以管理某一类型的的所有事件。
+
+        // 将事件绑定父元素身上， 点击子元素的时候通过事件冒泡会触发父元素的事件，判断事件源
+
+        oUl.onclick=function(e){
+            e=e||window.event;
+            // 判断此事件的为标准浏览器还是ie浏览器的：
+            // e代表标准浏览器，window.event代表ie浏览器 
+            var target=e.target||e.srcElement;
+            // 得到此事件的事件源
+            // e.target代表标准浏览器的写法
+            // e.srcElement代表ie浏览器的写法
+            if(target.tagName=='LI')
+            console.log(target.innerHTML);
+        }
+
+    </script>
+</body>
+
+</html>

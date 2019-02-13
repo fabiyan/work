@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  <style>
+      *{
+          touch-action: none;
+      }
+      .div1{
+          width:200px;
+          height: 200px;
+          background: red;
+          margin: auto auto;
+      }
+  </style>
+</head>
+<body>
+    <div class="div1">
+
+    </div> 
+    <script src="zepto.js"></script>
+    <script src="touch.js"></script>
+   
+    <script>
+        // $('.div1').on('touchstart',function(){
+        //     console.log('start');
+        // })
+        // $('.div1').on('touchend',function(){
+        //     console.log('end');
+        // })
+        // $('.div1').on('touchmove',function(){
+        //     console.log('move');
+        // })
+
+        // $('.div1').on('tap',function(){
+        //     console.log('tap');
+        // })
+        // // click事件有300ms的延迟 为了区分单击   双击
+        // $('.div1').on('click',function(){
+        //     console.log('click');
+        // })
+
+
+        //需给父元素或祖先元素或*加touch-action: none;
+        $('.div1').swipeLeft(function(){
+           console.log('111');
+       });
+       $('.div1').swipeRight(function(){
+           console.log('222');
+       });
+       $('.div1').swipeUp(function(){
+           console.log('333');
+       });
+       $('.div1').swipeDown(function(){
+           console.log('444');
+       });
+
+
+        
+    </script>
+</body>
+</html>

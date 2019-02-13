@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Document</title>
+    <!-- 内部样式引入CSS -->
+    <style>
+        /* 类选择器 */
+        #d2{
+            width: 200px;
+            height:200px;
+            background-color: darkslategray
+        }
+        /* id选择器 */
+        .dd{
+            width:200px;
+            height: 200px;
+            background-color: lightsteelblue;
+        }
+        /* 后代选择器 */
+        div span {
+            color:brown;
+        }
+        /* 子代选择器 */
+        div>span {
+
+        }
+        /* 同级选择也称作分组，群组选择 */
+        p,li{
+           background: tomato;
+           width:200px;
+        
+        }
+        a:hover{
+            color:aqua;
+        }
+        a:active{
+            color:brown;
+        }
+    </style>
+    <!-- 外部文件引入CSS -->
+    <link type="text/css" rel="stylesheet" href="test1.css"> 
+</head>
+<body>
+    <!-- 内联CSS样式引入 -->
+    <div id="d1" style="width: 200px;height: 200px;background:dimgrey;">div效果展示1</div>
+    <div id="d2">div效果展示2</div>
+    <div id="d3">div效果展示3</div>
+    <div id="d4" class="dd">div效果展示4</div>
+    <div id="d5" class="dd">div效果展示5</div>
+    <div id="d6">
+        <span>div效果展示6</span>
+    </div>
+    <p>p效果展示</p>
+    <ul>
+        <li>li效果展示1</li>
+        <li>li效果展示2</li>
+        <li>li效果展示3</li>
+    </ul>
+    <a href="http://www.baidu.com" target="_blank">点击跳转</a>
+  </body>
+</html>

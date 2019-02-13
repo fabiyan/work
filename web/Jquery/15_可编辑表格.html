@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td {
+            border: 1px solid black;
+            margin: 0px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        /* 去掉table表格的间隙 */
+        td {
+            width: 150px;
+        }
+
+        tr {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="aa">
+        <tr>
+            <td colspan="2">点击可编辑</td>
+        </tr>
+        <tr>
+            <td>序号</td>
+            <td>姓名</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td class="cli">点击编辑1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td class="cli">点击编辑2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td class="cli">点击编辑3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="cli">点击编辑4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td class="cli">点击编辑5</td>
+        </tr>
+    </table>
+    <script src='jquery-3.3.1.min.js'></script>
+    <script src='jquery-1.12.4.js'></script>
+    <script>
+        // $('.cli').on('click', function () {
+        //     if ($(this).find('input').size() <= 0) {
+        //         var $val = $(this).html();
+        //         $(this).html('<input class="txt" value="' + $val + '"></input>');
+
+        //         $(this).children().trigger('select');
+        //     }
+        // })
+
+        // $('.cli').on('blur', 'input', function () {
+        //     $(this).replaceWith($(this).val());
+        // })
+        // $('.cli').on('keyup', 'input', function (e) {
+        //     if (e.which == 13) {
+        //         var val = $(this).val();
+        //         // console.log(val);
+        //         $(this).parent().html(val);
+        //         // $(this).parent().replaceWith( $(this).html(true) );
+        //     }
+        // })
+
+
+
+            $('.cli').on('click',function(){
+            if($(this).find('input').size() <=0 ){
+                 var $val=$(this).html();
+            //   $(this).replaceWith('<td class="cli"><input type="text" value="'+$val+'"></input></td>');
+            $(this).html('<input type="text" value="'+$val+'"></input>');
+            $(this).children().trigger('select');
+            }
+
+        })
+            $('#aa').on('blur','input',function(){
+             $(this).replaceWith( $(this).val() );
+             })
+        $('#aa').on('keyup','input',function(e){
+            if(e.which==13){
+                var val=$(this).val();
+                $(this).replaceWith( val);
+            }
+        })
+    </script>
+</body>
+
+</html>

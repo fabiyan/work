@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 270px;
+            border: 1px solid gray;
+        }
+
+        ul {
+            list-style: none;
+            overflow: hidden;
+            margin-left: -30px;
+            margin-top: 5px;
+        }
+
+        li {
+            float: left;
+            width: 80px;
+            height: 50px;
+            background: gray;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            /* margin-left:0px; */
+        }
+
+        /* li:nth-child(1){
+            margin-left:-40px;
+        } */
+        .act {
+            background: black;
+            color: whitesmoke;
+            font-size: 18px;
+
+        }
+
+        #content div {
+            width: 260px;
+            height: 200px;
+            background: greenyellow;
+            margin: 0 auto;
+            display: none;
+            margin-bottom: 5px;
+            margin-top: -8px;
+        }
+
+        #content .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="btn-box">
+            <li class="act">军事</li>
+            <li>科技</li>
+            <li>教育</li>
+        </ul>
+        <div id="content">
+            <div class="active">军事</div>
+            <div>科技</div>
+            <div>教育</div>
+        </div>
+    </div>
+    <script src='jquery-3.3.1.min.js'></script>
+    <script>
+        // $('.btn-box li').on('click', function () {
+        //     $(this).addClass('act').siblings().removeClass('act');
+        //     $('#content div').eq($(this).index()).addClass('active').siblings().removeClass('active');
+        // })
+
+
+        $('li').each(function (index) {
+
+            $(this).on('click', function () {
+                $(this).addClass('act').siblings().removeClass('act');
+                $('#content div').eq(index).addClass('active').siblings().removeClass('active');
+                
+            })
+        })
+    </script>
+</body>
+
+</html>

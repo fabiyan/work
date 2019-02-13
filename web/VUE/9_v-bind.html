@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .a{
+            background: red;
+        }
+        .b{
+            color:yellow;
+        }
+        .c{
+            background: blue;
+        }
+        .d{
+           color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div v-bind:title="title" :id="num+'01'">{{msg}}</div>
+        <div :class="{a:isA,b:isB}">hhhhh</div>
+        <div :class="[classC,classD]">vvvvv</div>
+    </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                msg:'hello',
+                title:'v-bind',
+                num:"number",
+                isA:true,
+                isB:true,
+                classC:'c',
+                classD:'d'   
+                 }
+        })
+    </script>
+</body>
+</html>

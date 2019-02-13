@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       
+
+        #head {
+            width: 960px;
+            background: gray;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin:50px auto 50px;
+           
+        }
+
+        #title {
+            width: 960px;
+            background: gray;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin:50px auto 50px;
+        }
+        #img{
+            width: 960px;
+            margin:0 auto;
+           
+           
+        }
+      #back-img{
+        background-image: url('./01.jpg');
+  
+        background-size: 100%;
+        height:540px;
+       
+      }
+     
+        #txt{
+            width: 960px;
+            margin:0 auto 50px;
+            overflow: hidden;
+            display: table;
+        }
+        #left {
+            width: 500px;
+            background: tomato;
+            height: 400px;
+            text-align: center;
+            float: left;
+            display: table;
+        }
+        #right {
+            width: 400px;
+            background: slategrey;
+            height: 400px;
+            float:right;
+            display: table;
+        }
+        p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        /*使段落文字垂直居中
+        给父元素设置display：table属性
+        给段落元素设置display：table-cell， vertical-align: middle;
+         */
+        /* #aa{
+            display: block;
+
+        }
+        #bb{
+            display: none;
+        }
+        #cc{
+            display: none;
+        } */
+        #buttom {
+           
+            width: 960px;
+            background: gray;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin:0 auto 50px;
+        }
+        @media screen and (max-width:960px){
+            #head{
+                width:100%;
+            }
+            #title{
+                width:100%;
+            }
+          
+            /* #img{
+                width:100%;
+               
+            }
+            #img div{
+                height:100%;
+              
+            } */
+            #img{
+                width:100%;
+            }
+            #back-img{
+                background-image: url('./01_s_2x.jpg');
+                padding-top: 56%;
+                height:0px;
+            }
+            #txt{
+                width:100%;
+            }
+            #left{
+                width:65%;
+            }
+            #right{
+                width:30%;
+            }
+            #buttom{
+                width:100%;
+            }
+        }
+        @media screen and (max-width:480px){
+          
+            #img{
+                width:100%;
+            }
+            #left{
+                width:100%;
+            }
+            #right{
+                width:100%;
+            }
+            #buttom{
+                width:100%;
+            }
+            #img{
+                width:100%;
+            }
+            #back-img{
+                background-image: url('./01_s.jpg');
+
+                /* 相对于父元素，设置自己的高与宽的比例 */
+                padding-top: 56%;
+                height:0px;
+            }
+            
+        }
+        /* @media screen and (max-width:480px){
+            #cc{
+                display: block;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+  
+        <div id="head">页头</div>
+        <div id='title'>标题</div>
+        <div id='img'>
+           <div id="back-img"></div>
+        </div>
+        <div id="txt">
+            <div id="left">
+                <p>Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Mauris sem erat,
+                    egestas quis luctus ut, rhoncus vitae risus.
+                    Integer venenatis libero sit amet sapien dictum,
+                    quis bibendum mi volutpat. Cras pretium quam quis magna facilisis,
+                    eget feugiat nisi lacinia.
+                </p>
+            </div>
+            <div id="right">
+                <p>Donec dolor arcu, interdum sed turpis faucibus,
+                    placerat ultricies felis. Donec pulvinar gravida rhoncus.
+                    Suspendisse vestibulum est eget dolor lobortis.
+                </p>
+            </div>
+        </div>
+        <div id='buttom'>页尾</div>
+    
+</body>
+
+</html>

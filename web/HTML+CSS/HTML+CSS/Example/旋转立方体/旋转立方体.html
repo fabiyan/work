@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes name{
+            from{transform: rotateX(0deg) rotateY(90deg) ;}
+            to{transform:rotateX(360deg) rotateY(360deg) ;}
+        }
+        .con{
+            width: 200px;;
+            height: 200px;
+            background-color:rgba(128,128,128,0.7);
+            margin:0 auto;
+            margin-top:200px;
+            position: relative;
+            /* perspective: 180px; */
+            /* -webkit-perspective: 500px; */
+            transform-style: preserve-3d;
+            /* transition: transform 2s linear; */
+            animation: name 1s ease-in 0.5;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .con div{
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            position: absolute;
+            left:0px;
+            top:0px;
+            font-size: 80px;
+            line-height: 200px;
+            text-align: center;
+            /* perspective: 800px; */
+        }
+        .one{
+            background-color: rgba(2, 82, 55,0.7);
+            transform: rotatex(90deg) translateZ(100px);
+        }
+        .two{
+            background-color: rgba(25,200,190,0.6);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .three{
+            background-color: rgba(155,20,50,0.7);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .four{
+            background-color: rgba(255,128,0,0.7);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .five{
+            background-color: rgba(0,0,0,0.6);
+            transform: rotateZ(360deg) translateZ(100px);;
+        }
+        .six{
+            transform: translateZ(100px);
+        }
+
+</style>
+</head>
+<body>
+    <div class="con">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+    </div>
+</body>
+</html>

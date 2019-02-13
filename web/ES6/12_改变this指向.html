@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj1={
+            name:'zs',
+            age:19,
+            eat:function(food){
+                console.log(this.name+":"+this.age+"  "+food);
+            }
+        }
+        obj1.eat('apple');
+        var obj2={
+            name:'lisi',
+            age:33
+        }
+        obj1.eat.call(obj2,'orange');
+       
+        function fn(a,b){
+            console.log(this,a,b);
+        }
+        fn('aa','bb');
+        let p1={
+            name:'ww'
+        }
+        
+         // 改变this指向：
+        fn.call(p1,'ww111','ww222');
+         fn.bind(p1,'ww55','ww66')();
+        fn.apply(p1,['ww33','ww44']);
+       
+
+    
+    </script>
+</body>
+</html>

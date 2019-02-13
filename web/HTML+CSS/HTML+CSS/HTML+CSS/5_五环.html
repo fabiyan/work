@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #qq div{
+            width:200px;
+            height: 200px;
+            border:10px solid gray;
+            border-radius:50%;
+            position: absolute;
+        }
+        #qq div:nth-child(1){
+            border-color: blue;
+            left:0px;
+            top:0px;
+        }
+        #qq div:nth-child(2){
+            border-color:black;
+            left:230px;
+            top:0px;
+        }
+        #qq div:nth-child(3){
+            border-color:red;
+            left:460px;
+            top:0px;
+        }
+        #qq div:nth-child(4){
+            border-color:yellow;
+            left:110px;
+            top:110px;
+            /* border-top-color: transparent; */
+            
+        }
+        #qq div:nth-child(5){
+            border-color:green;
+            left:340px;
+            top:110px;
+
+        }
+        #qq div:nth-child(1)::after{
+            content: "";
+            display: block;
+            width:200px;
+            height: 200px;
+            border:10px solid blue;
+            border-radius: 50%;
+            position: absolute;
+            left:-10px;
+            top:-10px;
+            z-index: 1;
+            border-bottom-color: transparent;
+        }
+        #qq div:nth-child(2)::after{
+            content: "";
+            display: block;
+            width:200px;
+            height: 200px;
+            border:10px solid black;
+            border-radius: 50%;
+            position: absolute;
+            left:-10px;
+            top:-10px;
+            z-index:1;
+            border-left-color: transparent;
+
+        }
+        #qq div:nth-child(3)::after{
+            content: "";
+            display: block;
+            width:200px;
+            height: 200px;
+            border:10px solid red;
+            border-radius: 50%;
+            position: absolute;
+            left:-10px;
+            top:-10px;
+            z-index: 3;
+            border-left-color:transparent;
+        }
+        #qq div:nth-child(4)::after{
+            content: "";
+            display: block;
+            width:200px;
+            height: 200px;
+            border:10px solid yellow;
+            border-radius: 50%;
+            position: absolute;
+            left:-10px;
+            top:-10px;
+            border-top-color: transparent;
+        }
+        #qq div:nth-child(5)::after{
+            content: "";
+            display: block;
+            width:200px;
+            height: 200px;
+            border:10px solid green;
+            border-radius: 50%;
+            position: absolute;
+            left:-10px;
+            top:-10px;
+            z-index:2;
+            border-top-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="qq">
+        <div id="aa"></div>
+        <div id="bb"></div>
+        <div id="cc"></div>
+        <div id="dd"></div>
+        <div id="ee"></div>
+    </div>
+</body>
+
+</html>

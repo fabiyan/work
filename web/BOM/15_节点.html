@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        qweqweqwe
+        <ul>
+            <li>asdasd</li>
+        </ul>
+    </div>
+    <div id="div2">
+        <ul id="oul">
+            <li>1111</li>
+            <li>2222</li>
+        </ul>
+    </div>
+    <!-- 以上共有4个节点，分别为div,ul,li，以及li中的文本节点-->
+    <script>
+        // 获取节点的方法
+        var oDiv1=document.getElementById("div1");
+        var oDiv2=document.getElementById("div2");
+        // var oTagname=document.getElementsByTagName("tagname");
+        // var oName=document.getElementsByName("name");
+        // var oClassname=document.getElementsByClassName("classname")
+
+        /* 节点  
+             nodeType 节点类型 
+             元素节点  1
+             属性节点  2 
+             文本节点  3
+             注释节点  8
+
+             nodeName 
+
+         */
+        //  console.log(oDiv1.nodeType);
+        //  console.log(oDiv1.firstChild.nodeType);//取到此节点中的第一个文本节点
+        //  console.log(oDiv1.innerHTML);//取到此节点中的内容
+         
+        //  console.log(oDiv1.nodeName);//取到此节点的名称
+        //  console.log(oDiv1.firstChild.nodeName);//取到此节点的第一个孩子节点的类型
+        
+
+        /*
+        节点的遍历
+        */
+        // 1:  oDiv1.nextSibling//下一个兄弟节点，其中两个兄弟节点之间的回车换行和空格，
+        //                      //也算一个兄弟节点，为文本节点
+        //     oDiv1.nextElementSibling //直接找到下一个兄弟节点
+
+        // 2： oDiv1.previousSibling//上一个兄弟节点，其中两个兄弟节点之间的回车换行和空格，
+        //                          //也算一个兄弟节点，为文本节点
+        //     oDiv1.previousElementSibling//直接找到上一个兄弟节点
+
+        // 3： oDiv1.firstChild//此节点的第一个孩子节点，其中此节点与第一个孩子节点之间的回车换行和空格，
+        //                     // 也算一个孩子节点，为文本节点
+        //     oDiv1.firstElementChild//直接找到第一个孩子节点
+
+        // 4： oDiv1.lastChild//此节点的最后一个孩子节点，其中此节点与最后一个孩子节点之间的回车换行和空格，
+        //                   // 也算一个孩子节点，为文本节点
+        //     oDiv1.lastElementChild//直接找到最后一个孩子节点
+
+        // 5:  oDiv1.children//找到此节点的所有儿子节点
+        // console.log(oDiv1.children);
+
+        // oDiv1.nextElementSibling.style.background="red";
+
+        // 封装nextSibling方法
+        // function next(elem){
+        //     do{
+        //         elem=elem.nextSibling;
+        //     }while(elem && elem.nodeType!=1)
+
+        //     return elem;
+        // }
+        // var oDiv22 = next(oDiv1);
+        // oDiv22.style.background = "red";
+
+        //  封装previousSibling方法
+        // function previous(elem){
+        //     do{
+        //         elem=elem.previousSibling;
+        //     }while(elem && elem.nodeType!=1)
+
+        //     return elem;
+        // }
+        // var oDiv22 = previous(oDiv2);
+        // oDiv22.style.background = "red";
+
+            var oUl=document.getElementById("oul")
+        // 封装firstChild方法,lastChild封装方法和其类似
+        // function first(elem){
+        //     elem = elem.firstChild;
+        //     if(elem.nodeType == 1){
+        //         return elem;
+        //     }else{
+        //         return next(elem);
+        //     }
+        // }
+        // var oUl1=first(oUl);
+        // oUl1.style.background="red";
+        // console.log( first(oUl)  );
+
+        console.log(oDiv2.children);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

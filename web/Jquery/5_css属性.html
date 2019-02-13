@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #d1{
+            width:400px;
+            height: 400px;
+            background: pink;
+            border: 1px solid red;
+            position: relative;
+        }
+        #d2{
+            width: 200px;
+            height: 200px;
+            background: purple;
+            /* margin-top:100px;
+            margin-left:50px; */
+            position: absolute;
+            left:10px;
+            top:50px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id='d2'></div>
+    </div>
+    <script src='jquery-3.3.1.min.js'></script>
+    <script>
+        console.log( $('#d2').offset().top );
+        console.log( $('#d2').position().left);
+        console.log( $('#d2').offsetParent());
+        $('#d2').offsetParent().css('background','green');
+    </script>
+</body>
+</html>

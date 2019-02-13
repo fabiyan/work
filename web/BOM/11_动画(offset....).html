@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #div0 {
+            width: 500px;
+            height: 500px;
+            background: gray;
+
+        }
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: tomato;
+        }
+
+        #div2 {
+            width: 100px;
+            height: 200px;
+            background: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div0">
+        <div id="div1"></div>
+    </div>
+
+    <div id="div2"></div>
+
+    <script>
+        var oDiv = document.getElementById("div1");
+        // oDiv.style.width:只能获取内联样式的属性值，但可以设置任何样式的属性值。
+
+        // oDiv.offsetHeight:可以获取属性值，但不能设置样式的属性值。
+        // oDiv.offsetWidth:可以获取属性值，但不能设置样式的属性值。
+
+        // 获取相对于其祖先元素的属性值
+        // oDiv.offsetLeft
+        // oDiv.offsetTop
+
+        // 获取祖先元素的所有信息
+        // oDiv.offsetParent
+        var oDiv = document.getElementById("div2");
+        oDiv.onclick = function () {
+            if (oDiv.offsetWidth < 800) var timer = setInterval(function () {
+                    oDiv.style.width = oDiv.offsetWidth + 50 + "px";
+                },
+                200);
+            else {
+                clearInterval(timer);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    font-size:0.28rem;
+}
+.nav-bar{
+    height:1.01rem;
+    background: #06c1ae;
+    border-bottom: 1px solid teal;
+    display: flex;
+}
+.nav-bar{
+    flex:1;
+  
+}  
+.nav-bar a{
+    flex:1;
+    background: teal;
+    display: flex;
+    text-decoration: none;
+    height:0.64rem;
+    line-height: 0.6rem;
+    margin-top:0.2005rem;
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    opacity: 0.6;
+}
+.nav-bar .search{
+    font-size:0.4rem;
+    height:0.64rem;
+   
+}
+.nav-bar input{
+    flex: 1;
+    height:0.6rem;
+    border-radius: 5%;
+    font-size: 0.28rem;
+    background: teal;
+    color:white;
+    border-color: transparent;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+}
+.area{
+    width:1.67rem;
+    line-height: 1.01rem;
+    height:1.01rem;
+    text-align: center;
+    color:white;
+    font-size:0.32rem;
+}
+.my{
+    width:0.94rem;
+    line-height: 1.01rem;
+    height:1.01rem;
+    text-align: center;
+    color:white;
+}
+.img img{
+    width:100%;
+}
+.list{
+    height:3.6rem;
+    width:6.4rem;
+    overflow: hidden;
+    position: relative;
+
+}
+.list .circle{
+    width:0.8rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    display: block;
+    background: #fd9d21;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin:0 auto;
+}
+.list .sel{
+    font-size:0.5rem;
+}
+.sel{
+    color:white;
+}
+.list .slide{
+    width:12.8rem;
+}
+.list ul{
+    float: left;
+    width:50%;
+
+}
+.list li{
+    float: left;
+    list-style: none;
+    width:20%;
+    margin:0 auto;
+    text-align: center;
+    padding-top:0.2rem;
+}
+
+#btn{
+    width:1.5rem;
+    height:1rem;
+    /* background: red; */
+    background: transparent;
+    position: absolute;
+    bottom:0; 
+    left:2.45rem;
+   
+    
+   
+}
+
+#btn span{
+    list-style: none;
+    width:0.4rem;
+    height:0.4rem;
+    /* background: #06c1ae; */
+    border-radius:50%;
+    float: left;
+    display: block;
+    margin-top:0.3rem;
+    margin-right:0.2rem;
+    margin-left:0.1rem;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+.active{
+    background: #06c1ae;
+}
+
+
+
+
+
+
+
+
+
+.like{
+    clear: both;
+    width:100%;
+    padding-left:0.2rem;
+}
+.like h2{
+    height:0.8rem;
+    line-height: 0.8rem;
+}
+.like-list li{
+    display: flex;
+    height:1.8rem;
+}
+.like-list img{
+    width:1.8rem;
+    height:1.8rem;
+}
+.like-list .like-inner{
+    flex:1;
+}
+.like-inner p{
+    margin:0.1rem auto 0.1rem;
+}

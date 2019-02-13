@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>11111</li>
+        <li>22222</li>
+    </ul>
+    <script>
+        // var 与let 的区别
+        // var 有变量提升，let没有
+
+        // 变量提升
+        // console.log(a);
+        // var a=5;
+        // 输出undefined
+        // 此时，var会在console上边自己加上 var a;但没有值
+
+
+        // console.log(a);
+        // let a=5;
+        // 输出a is not defined
+
+
+        //1.let没有变量提升
+        //2.块级作用域，变量不会释放。
+        var oUl=document.getElementsByTagName('li');
+
+        // for(var i=0;i<oUl.length;i++){
+        //     oUl[i].index=i;
+        //     oUl[i].onclick=function(){
+        //         console.log(this.index);
+        //     }
+        // }
+
+        for(var i=0;i<oUl.length;i++){
+            (function(j){
+                oUl[j].onclick=function(){
+                    console.log(j);
+                }
+            })(i);
+        }
+
+        // for(let i=0;i<oUl.length;i++){
+        //     oUl[i].onclick=function(){
+        //         console.log(i);
+        //     }
+        // }
+
+        // let 变量有块级作用域，let变量在作用域内不会释放，而var变量只在函数中或全局内
+
+        // let 变量不能重复声明,也不能用var去覆盖let 已经声明的变量
+         let a=5;
+         var a=10;
+         console.log(a);
+        // 输出Identifier 'a' has already been declared
+
+
+
+        //1.let没有变量提升
+        //2.块级作用域，变量不会释放。
+        //3.let 变量不能重复声明,也不能用var去覆盖let 已经声明的变量
+        //4.le具有临时性死区（暂时失效区），在当前作用域不允许有同名的变量进来
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

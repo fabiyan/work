@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .act{
+        background: pink;
+        border:1px solid red;
+    }
+    </style>
+</head>
+<body>
+    <div id="div1" name="dv">sadwdsadwasad</div>
+
+    <input type="checkbox">足球
+    <input type="checkbox">篮球
+    <input type="checkbox">网球
+
+    <button id="btn1">全选</button>
+    <button id="btn2">全否</button>
+    <button id="btn3">反选</button>
+
+
+    <input type="text" value='plaese' id="txt">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        // 普通  attr
+    //  $("#div1").attr('name','dv1') ;
+    //  console.log(  $("#div1").attr('name') ); 
+
+        // 特殊  prop  //其中有checkbox的checked属性，option的selected属性
+    //  $("#div1").prop('name','dv2') ;
+    //  console.log(  $("#div1").prop('name') ); 
+
+    $("#btn1").on('click',function(){
+        $(':checkbox').prop('checked',true);
+    })
+    $('#btn2').on('click',function(){
+        $(':checkbox').prop('checked',false);
+    })
+    $('#btn3').on('click',function(){
+        $(':checkbox').prop('checked',!$(':checkbox').prop('checked'));
+    })
+  
+     $('#btn3').on('click',function(){
+    $(':checkbox').each(function(index,elem){
+        elem.checked=!elem.checked;
+    })
+     })
+
+     $('#txt').on('focus',function(){
+         if(this.value==this.defaultValue){
+             this.value="";
+         }
+         $(this).addClass('act');
+     });
+     $('#txt').on('blur',function(){
+         if(this.value==""){
+         this.value=this.defaultValue;
+         }
+         $(this).removeClass("act");
+     })
+    
+    //  console.log($('#txt').val());
+    </script>
+</body>
+</html>

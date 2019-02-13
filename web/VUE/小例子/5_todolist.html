@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #app{
+            width:400px;
+            margin: 0 auto;
+
+        }
+        #app div{
+            width:400px;
+            border-top:3px solid grey;
+            padding-top:10px;
+            border-bottom:3px solid grey;
+            margin-bottom: 5px;
+        }
+        input{
+            width:100px;
+        }
+        span{
+            float: right;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            width:400px;
+            background: gray;
+            height:50px;
+            margin-top:5px;
+            line-height: 50px;
+            padding-left:0;
+        }
+        .active{
+          background: pink;
+      }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>Orderlist</h2>
+        <div>
+            名称<input type="text" v-model="nam" placeholder="请输入产品名">
+            价格<input type="text" v-model="val" placeholder="请输入价格">
+            <button @click="add()">添加</button>
+            <input type="text" v-model="search" placeholder="请输入搜索内容"><button @click="sea()">搜索</button>
+            <ul>
+                <li v-for="(obj,index) in showlist" :class="{active:obj.isA}" @click="color(obj)">
+                  <input type="checkbox" v-model="buy" :value="obj">  {{obj.name}} <span>{{obj.value}}</span>
+                </li>
+            </ul>
+          
+        </div>
+        <button @click="del()">删除选中</button>&nbsp;&nbsp;&nbsp;total:{{total()}}
+    </div>
+    <script src="../vue.js"></script>
+    <script src="../vue-2.5.17.js"></script>
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                list:[{
+                    name:'裤子',
+                    value:100,
+                    isA:false
+                },{             
+                    name:'衣服',
+                    value:200,
+                    isA:false
+                },{             
+                    name:'衬衫',
+                    value:300,
+                    isA:false
+                }],
+                buy:[{
+                    name:'',
+                    value:0,
+                    isA:false
+                }],
+                search:'',
+                show:[{}],
+                showlist:[{
+                    name:'裤子',
+                    value:100,
+                    isA:false
+                },{             
+                    name:'衣服',
+                    value:200,
+                    isA:false
+                },{             
+                    name:'衬衫',
+                    value:300,
+                    isA:false
+                }],
+                buy:[{
+                    name:'',
+                    value:0,
+                    isA:false
+                }],
+                nam:'',
+                val:'',
+                flag:false
+            },
+            methods: {
+                total(){
+                let count=0;
+                this.buy.forEach((obj,index) => {
+                    // 因为新加的会自动将价格（即数字）转换为字符串，故需用强制转换类型转换
+                    count+=parseInt(obj.value);                  
+                });
+                // console.log(this.all);
+                if(this.flag){
+                    count=0;
+                }
+                  return count;
+                },
+                color(obj){
+                    let num;
+                    obj.isA=!obj.isA;
+                    if(obj.isA==true){
+                        this.buy.push(obj);
+                    }else{
+                        this.buy.forEach((obj,index)=>{
+                            if(obj.isA==false){
+                                delete(this.buy[index]);
+                            }
+                        })
+                    }
+                },
+                add(){                     
+                    this.list.push({name:this.nam,value:this.val,isA:false});
+                    this.list=[...this.list];
+                    this.showlist=[...this.list];
+                    // this.buy=[...this.list];
+                    this.nam="";
+                    this.val=0;
+                        console.log(this.list);
+                    
+                },
+                sea(){
+                        var arr=this.list.filter((obj,index)=>{
+                       
+                            //若用function。则此时this是Windows，故改成=》，找到this的父元素vue
+                            return obj.name.includes(this.search);
+                        })
+                        this.show=[...arr]; 
+                        this.showlist=[...this.show];
+                    },
+                del(){
+                    this.buy.forEach((obj2,index2)=>{    
+                        this.list.forEach((obj1,index1) => {
+                                if(obj2.name==obj1.name){
+                                    this.list.splice(index1,1);
+                                }
+                    })                 
+                });
+                this.showlist=[...this.list];
+                this.flag=true;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="change()">click</button>
+        <ul>
+            <li v-for="val in arr">{{val}}</li>
+        </ul>
+        <h1>{{total()}}</h1>
+        <h1>{{total()}}</h1>
+        <h1>{{sum}}</h1>
+        <!-- total（）为方法，每调用一次，执行一次，而sum为属性，只执行一次，会将结果缓存， -->
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                arr:[1,2,3,4]
+            },
+            methods: {
+                change(){
+                    // this.arr[1]=666//此时arr已修改，但不会显示，故可用
+                    Vue.set(this.arr,1,666);
+                },
+                total(){
+                    let count=0;
+                this.arr.forEach((val) => {
+                    count+=val;
+                });
+                return count;
+                }
+            },
+            computed: {
+                // 在这个里面，sum为属性，不是
+                sum(){
+                    let count=0;
+                this.arr.forEach((val) => {
+                    count+=val;
+                });
+                return count;
+                }
+            },
+
+        })
+    </script>
+</body>
+</html>

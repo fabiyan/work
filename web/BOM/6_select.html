@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            width:270px;
+            border:1px solid gray;
+        }
+        ul{
+            list-style: none;
+            overflow: hidden;
+            margin-left:-30px;
+            margin-top:5px;
+        }
+        li{
+            float:left;
+            width:80px;
+            height:50px;
+            background: gray;
+            margin-right:5px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer; 
+            border-radius: 15px;
+            /* margin-left:0px; */
+            }
+        /* li:nth-child(1){
+            margin-left:-40px;
+        } */
+        .act{
+            background: black;
+            color:whitesmoke;
+            font-size:18px;
+
+        }
+        #content img{
+            width:260px;
+            height:200px;
+            /* background: greenyellow; */
+            margin:0 auto;
+            display: none;
+            margin-bottom: 5px;
+            margin-top:-8px;
+           
+        }
+        #content .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="btn-box">
+            <li class="act">军事</li>
+            <li>科技</li>
+            <li>教育</li>
+        </ul>
+        <div id="content">
+            <img  class="active" src="../HTML+CSS//HTML+CSS//pic/1.jpg" alt="">
+            <img  src="../HTML+CSS//HTML+CSS//pic/3.jpg" alt="">
+            <img  src="../HTML+CSS//HTML+CSS//pic/4.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementsByTagName("li");//取li标签的数组
+        var act = document.getElementById("content")//先取id为content的标签
+        var active = act.getElementsByTagName("img");
+        // for(var i=0;i<active.length;i++){
+        //     document.write(active[i]);
+        // }
+        for(var i=0;i<btn.length;i++){
+            btn[i].idx = i;
+            btn[i].onclick=function(){
+                for(var j=0;j<btn.length;j++){
+                    btn[j].className="";
+                    active[j].className="";
+                }
+                this.className="act";
+                active[this.idx].className="active";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            border:1px solid gray;
+            width:250px;
+        }
+        ul{
+            list-style: none;
+            overflow: hidden;
+        }
+        li{
+            float:left;
+            width:14px;
+            height: 14px;
+            background: tomato;
+            margin-top:0px;
+            margin-right:20px;
+            background-image: url(theme.gif);
+            background-repeat: none;
+            background-position: 0 0;
+           }
+           .div{
+               width: 80px;
+               width: 80px;
+               float: left;
+               margin:5px 10px;
+           }
+           li:nth-child(1){
+               background-position: -0px 0;
+           }
+           li:nth-child(2){
+               background-position: -100px 0;
+           }
+           li:nth-child(3){
+                background-position: -80px 0;
+           }
+           li:nth-child(4){
+               background-position: -60px 0;
+           }
+           li:nth-child(5){
+                background-position: -40px 0;
+           }
+           li:nth-child(6){
+               background-position: -20px 0;
+           }
+
+           li:nth-child(1).active{
+               background-position: -0px -15px;
+           }
+           li:nth-child(2).active{
+               background-position: -100px -15px;
+           }
+           li:nth-child(3).active{
+                background-position: -80px -15px;
+           }
+           li:nth-child(4).active{
+               background-position: -60px -15px;
+           }
+           li:nth-child(5).active{
+                background-position: -40px -15px;
+           }
+           li:nth-child(6).active{
+               background-position: -20px -15px;
+           }
+           .div{
+            background: gray;
+           }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="active" value="gray"></li>
+            <li value="purple"></li>
+            <li value="red"></li>
+            <li value="blue"></li>
+            <li value="orange"></li>
+            <li value="green"></li>
+        </ul>
+      
+    </div>  
+    <div class="div">click11</div>
+        <div class="div">click22</div>
+        <script src="../jquery-3.3.1.min.js"></script>
+        <script>
+            $('ul li').on('click',function(){
+                $(this).addClass('active').siblings().removeClass('active');
+                var $color=$(this).attr('value');
+                $('.div').css('background',$color);
+            })
+        </script>
+</body>
+</html>

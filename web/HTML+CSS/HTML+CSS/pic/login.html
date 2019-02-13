@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title style="text-align: center;">
+		推特标签推荐
+	</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: rgba(0, 0, 0, 0.1);
+		}
+
+		.head {
+			width: 100%;
+			height: 100%;
+		
+		}
+
+		h1 {
+			background: rgba(52, 72, 94, 0.8);
+			height: 80px;
+			text-align: center;
+			line-height: 80px;
+			color: white;
+			font-size: 35px;
+		}
+		.con{
+			width:100%;
+			height:230px;
+			/* background: red; */
+			margin:0 auto;
+			overflow: hidden;
+			
+		}
+		.con-left{
+			height:180px;
+			width:600px;
+			/* background: blue; */
+			border:1px solid black;
+			float:left;
+			border-radius: 8px;
+			margin-top:15px;
+			margin-left:80px;
+
+		}
+		.con-right{
+			height:180px;
+			width:400px;
+			/* background: green; */
+			float:right;
+			/* border-radius: 8px; */
+			margin-top:15px;
+			margin-right:150px;
+		}
+		.con-top{
+			width:300px;
+			height:60px;
+			/* background: pink; */
+			margin:0 auto;
+			margin-top:20px;
+		}
+		.con-top select{
+			width:300px;
+			height: 60px;
+			font-size: 20px;
+		}
+		.con-bottom{
+			width:300px;
+			height:60px;
+			/* background: purple; */
+			margin:0 auto;
+			margin-top:20px;
+		}
+		.con-bottom input{
+			width:300px;
+			height:60px;
+			font-size:20px;
+		}
+		.content{
+			width:100%;
+			height:400px;
+			background: yellow;
+			margin: 0 auto;
+			margin-top:-10px;
+		}
+		.show{
+			width:100px;
+			height:50px;
+			background: red;
+			margin-left:80px;
+			margin-top:-20px;
+			border-top:1px solid black;
+			border-left:1px solid black;
+			border-right:1px solid black;
+			border-bottom:1px solid transparent;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 50px;
+			text-align: center;
+			
+			
+		}
+		.show-result{
+			width:1100px;
+			height: 300px;
+			margin:0 auto;
+			margin-left:80px;
+			
+			/* background: green; */
+			border:1px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="head">
+
+		<h1>推特标签推荐</h1>
+		<div class="con">
+			<div class="con-left">
+				<textarea name="" id="" cols="" rows=""></textarea>
+			</div>
+			<div class="con-right">
+				<div class="con-top"><select name="" id="">
+					<option value="">dsdasdasdas</option>
+					<option value="">dsdasdasdas</option>
+					<option value="">dsdasdasdas</option>
+					<option value="">dsdasdasdas</option>
+				</select></div>
+				<div class="con-bottom"> <input type="submit" value="分析"></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="show">结果展示</div>
+			<div class="show-result"></div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <demo aaa="hello">
+            <h1 slot="h">demo的内容</h1>
+            <input type="text" slot="inp">
+        </demo>
+    </div>
+    <template id="temp">
+        <div>
+            {{aaa}}
+            <slot name="h">占位（slot内的为默认值）</slot>
+            <!-- demo中有内容则用demo中方替换solt否则，输出slot的默认值 -->
+            <slot name="inp"></slot> 
+        </div>
+       
+    </template>
+    <script src="vue.js"></script>
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+
+            },
+            components:{
+                'demo':{
+                    template:'#temp',
+                    props:['aaa']
+                }
+            }
+        })
+    </script>
+</body>
+</html>

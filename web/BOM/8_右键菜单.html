@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            border:1px solid black; 
+            width:100px;
+
+            /* 去掉ul标签的子标签的缩进 */
+            margin:0px;
+            padding:0px;
+            display: none;
+            position:absolute;
+            /* top:200px;
+            left:200px;
+            */
+        }
+        li{
+            height:50px;
+            width:94px;
+            border-radius: 15px;
+            margin:2px auto;
+            background: gray;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="con">
+        <li>查看书签</li>
+        <li>整理书签</li>
+        <li>删除书签</li>
+        <li>其他操作</li>
+    </ul>  
+    <script>
+        var Oli=document.getElementsByTagName("li");
+        var oUl=document.getElementById("con");
+       document.oncontextmenu = function(e){
+          
+            // 阻止默认行为
+
+            // 标准浏览器
+            // e.preventDefault();
+
+            // ie浏览器
+            // e.returnValue=false;
+
+            // 通用
+            // return false;
+         
+           
+        
+        //  oUl.oncontextmenu=function(){
+           
+           oUl.style.display="block";
+           oUl.style.left=e.clientX+"px";
+           oUl.style.top=e.clientY+"px";
+            // }  
+             e.preventDefault();
+         }
+
+         for(var i=0;i<Oli.length;i++){
+             Oli[i].onclick=function(){
+
+        //         // 获得此标签内的内容
+           console.log(this.innerHTML);
+            oUl.style.display="none";
+            
+
+
+
+
+         }
+        }
+       
+    </script>
+</body>
+     
+</html>

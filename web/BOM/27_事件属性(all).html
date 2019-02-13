@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='div1'>
+        hello world
+    </div>
+    <script>
+        var oDiv1 = document.getElementById('div1');
+        oDiv1.onclick = function (e) {
+            // 事件,事件源,事件函数 
+
+            //判断事件为标准浏览器下的还是ie浏览器下的
+            e = e || window.event
+            // 获取事件源:
+            //e.target:标准浏览器
+            //e.srcElement:ie浏览器
+            var target = e.target || e.srcElement;
+
+            // e.clientX   鼠标距离可视区左边
+            // e.clientY   鼠标距离可视区上边
+
+            // e.keyCode  键盘码
+
+            //阻止默认行为:
+            // return fasle;最常用
+            // e.preventDefault;标准浏览器
+            // e.returnValue=false;
+
+            // 阻止事件冒泡:
+            // e.stopPropagation()   标准浏览器
+            // e.canceBubble=true;   ie浏览器
+
+            // 绑定事件 事件源的两种写法:
+            // console.log(this.innerHTML);
+            console.log(e.currentTarget.innerHTML);
+        }
+        document.onkeydown = function (e) {
+            e = e || window.event;
+            console.log(e.keyCode);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width:200px;
+            height:200px;
+            background: purple;
+            position: absolute;
+            left:0;
+            top:0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <script>
+        var oDiv=document.getElementById("div1");
+        oDiv.onmousedown=function(e){
+            var x=e.clientX-oDiv.offsetLeft;
+            var y=e.clientY-oDiv.offsetTop;
+          
+
+        //   此处若用oDiv，则若鼠标跑出div的时候，则此函数无效
+            document.onmousemove=function(e){
+                oDiv.style.left=e.clientX-x+"px";
+                oDiv.style.top=e.clientY-y+"px";
+              }
+
+            //   此处若用oDiv,则鼠标跑出body后，up的功能不能实现
+              document.onmouseup=function(){
+                  document.onmousemove=null;//清除上面的onmousemove功能，
+              }
+        }
+    </script>
+</body>
+
+</html>

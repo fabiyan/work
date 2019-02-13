@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <zj aa="111" bb="222"></zj>
+        <zj aa="111" bb="222"></zj>
+        <zj aa="111" bb="222"></zj>
+    </div>
+    <!-- <script type="text/template" id="temp">
+        <div>
+            <h1>{{aa}}</h1>
+            <p>{{bb}}</p>
+        </div>
+    </script> -->
+    <!-- 以上注释代码也可以写为 -->
+    <template id="temp">
+        <div>
+            <h1>{{aa}}</h1>
+            <p>{{bb}}</p>
+        </div>
+    </template>
+
+    <script src="vue.js"></script>
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+
+            },
+            components:{
+                // 'zj':{
+                //     template:'<h1>{{aa}}---{{bb}}</h1>',
+                //     props:['aa','bb']
+                // }
+                'zj':{
+                    template:'#temp',
+                    props:['aa','bb']
+                }
+            }
+        })
+    </script>
+</body>
+</html>

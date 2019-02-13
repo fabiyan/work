@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+    </ul>
+
+
+    <script>
+
+        /*扩展运算符
+
+        1.复制数组
+        2.作为数组的一部分
+        3.合共数组，对象
+        4.将类数组转化为数组
+
+        */
+            // let arr=[1,2,3];
+            // console.log(...arr);
+
+            // let arr2=[...arr,4,5];
+            // console.log(arr2);
+
+            // let a3=['a','b','c'];
+            // let a4=a3;
+            // a3[0]='d';
+            // console.log(a3,a4);
+
+            // let a4=[...a3];
+            // a3[0]='d';
+            // console.log(a3,a4);
+
+            // let a5=[1,2,3];
+            // let a6=[4,5,6];
+            // let a7=[...a5,...a6];
+            // console.log(a7);
+
+            var oLi=document.getElementsByTagName('li');
+            let arr3=[...oLi];
+            console.log(arr3);
+            arr3.push('hello');
+            console.log(arr3);
+
+            let p1={
+                name:'lisi',
+                age:20
+            }
+            let p2={
+                age:"30",
+                sex:'f'
+            }
+            let p3={...p1,...p2};
+            console.log(p3);
+            let p4={...p1,...p2,sno:12}
+            console.log(p4);
+
+            // reset:剩余的，返回的是剩余的
+            function fn0(...reset){
+                console.log('reset: '+reset);
+            }
+            fn0([1,2,3,4,5]);
+            // arguments,返回参数，是一个类数组
+            // arguments.callee 返回的是函数自己
+
+            function fn(){
+                console.log(arguments);
+            }
+            fn([1,2,3,4,5]);
+            fn(1,2,3,4,5);
+
+        </script>
+</body>
+</html>

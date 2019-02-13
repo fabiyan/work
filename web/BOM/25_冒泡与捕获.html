@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width:100px;
+            height: 100px;
+            background: blueviolet;
+        }
+        #div2{
+            width: 50px;
+            height: 50px;
+            background: rosybrown;
+        }
+    </style>
+</head>
+<body>
+    <div id='div1'>11111
+        <div id='div2'>22222</div>
+    </div>
+
+    <script>
+        // 事件流：捕获，冒泡
+        // 捕获：从外到里
+        // 冒泡：从里到外
+
+        var oDiv1=document.getElementById('div1');
+        var oDiv2=document.getElementById('div2');
+        // oDiv1.onclick=function(){
+        //     console.log('div1-out');//结果为： div1-out
+        // }
+       
+        // oDiv2.onclick=function(){
+        //     console.log('div2-in');结果为： div2-in，div1-out
+        // }
+      
+        // 捕获：从外到里
+        // oDiv1.addEventListener('click',function(){
+        //     console.log('div1-out捕获');//结果为： div1-out
+        // },true);
+        
+        // oDiv2.addEventListener('click',function(){
+        //     console.log('div2-in捕获');//结果为： div1-out，div2-in
+        // },true);
+
+        //冒泡：从里到外
+        oDiv1.addEventListener('click',function(){
+            console.log("div1-out冒泡");//结果为：div1-out
+        },false)
+        oDiv2.addEventListener("click",function(){
+            console.log("div2-in冒泡");//结果为：div2-in,div1-out
+        },false)
+
+
+        doucment.addEventListener('aa',bb,true/false)
+        //其中true代表执行的是捕获功能
+        //其中false代表执行的是冒泡功能
+    </script>
+</body>
+</html>

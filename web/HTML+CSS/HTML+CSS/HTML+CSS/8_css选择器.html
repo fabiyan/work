@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* div{
+            height:200px;
+            width:200px;
+            background-color: aqua;
+        }
+        .dd{
+            background-color: black;
+        } */
+        /* 优先级；
+            内联的优先级最高为1000，
+            id为100，
+            class为10,伪类也为10
+            然后标签为1，伪元素为1；
+            若为同一个选择器，则下面的会将上面的覆盖住；
+
+        */
+    #d1 h1{
+        background-color: rgb(226, 131, 43);
+    }
+    .class h1{
+        background-color: rgb(2, 14, 26);
+    }
+    #d2 .dd h1{
+        background-color: saddlebrown;
+    }
+    h1{
+        background-color: rgb(138,125,155, 0.6);
+    }
+
+    </style>
+</head>
+<body>
+    <!-- <div id="d1" class="dd">111</div>
+    <div id="d2" class="aa cc">222</div> -->
+    <div id="d1">
+        <div id="d2">
+            <div class="dd">
+                <h1 id="d3">111111111</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

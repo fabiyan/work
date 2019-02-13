@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+    </ul>
+    <script>
+        var oUl=document.getElementById('ul');
+        var oLi=document.getElementsByTagName('li');
+        //匿名自(立即)执行函数
+        // (function(形参){
+        //         需要执行的函数
+        // })(实参)
+        for(var i=0;i<oLi.length;i++){
+             (function(j){
+                oLi[j].onclick=function(){
+                    console.log(j);
+                }
+        })(i);
+        }
+       
+    </script>
+</body>
+</html>

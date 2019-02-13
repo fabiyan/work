@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #d1 {
+            height: 400px;
+            width: 400px;
+            margin-bottom: 50px;
+            background: teal;
+        }
+
+        #d2 {
+            height: 400px;
+            width: 400px;
+            margin-top: 20px;
+            background: saddlebrown;
+        }
+
+        /* 若为兄弟结点，则按比较大的边距合并 */
+        #d3 {
+            height: 600px;
+            width: 600px;
+            background: turquoise;
+            margin-top: 50px;
+            /* overflow: hidden; */
+            /* border:peru 1px solid; */
+            /* float: right;   */
+            position: absolute;
+        }
+
+        #d4 {
+            height: 400px;
+            width: 400px;
+            background: peru;
+            margin-top: 50px;
+            /* float: right;   */
+            /* position:absolute; */
+            /* margin-left:50px; */
+
+        }
+
+        /* 父子外边距合并的解决方案 
+            父元素加：overflow：hidden；
+            父元素加边框或padding属性
+            父元素或子元素浮动
+            父元素或子元素定位
+         */
+    </style>
+</head>
+
+<body>
+    <div id="d1">11111</div>
+    <div id="d2">22222</div>
+    <div id="d3">
+        <div id="d4"></div>
+    </div>
+</body>
+
+</html>

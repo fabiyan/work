@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        /* 方法一  */
+        body{
+            display: -webkit-flex;
+        }
+        .left{
+            width:200px;
+            height:200px;
+            background: red;
+
+        }
+         .center{
+            height: 200px;
+            flex-grow:1;
+            background: pink;
+            margin:0 10px;
+            
+        }
+        .right{
+            width:200px;
+            height:200px;
+            background: blue;
+        }
+       
+
+
+        /* 方法二 */
+        /* .left{
+            width:200px;
+            height:200px;
+            background: red;
+            float:left
+
+        }
+        .right{
+            width:200px;
+            height:200px;
+            background: blue;
+            float:right;
+        }
+        .center{
+            height: 200px;  
+            background: pink;
+            margin:0 210px;
+            
+        } 
+        但div的顺序为：
+        <div  class="left"></div>
+        <div class="right"></div>
+        <div class="center"></div> */
+
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    
+    <div class="center"></div><div class="right"></div>
+</body>
+</html>

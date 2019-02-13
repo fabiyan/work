@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #small-box {
+            float: left;
+            position: relative;
+        }
+        
+        #spa {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+        }
+        
+        #big-box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            display: none;
+        }
+        
+        #big-box>img {
+            position: absolute;
+            /* display: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="small-box">
+        <img src="1.jpg" alt="">
+        <span id="spa"></span>
+    </div>
+    <div id="big-box">
+        <img id="big-img" src="2.jpg" alt="">
+    </div>
+    <script>
+        var oSmallbox = document.getElementById("small-box");
+        var oSpa = document.getElementsByTagName("span")[0]; //取标签名为span的数组中第一个元素
+        var oBigbox = document.getElementById("big-box");
+        var oImg = document.getElementById("big-img");
+        oSmallbox.onmouseover = function() {
+            oSpa.style.display = "block";
+            oBigbox.style.display = "block";
+        }
+        oSmallbox.onmouseout = function() {
+            oSpa.style.display = "none";
+            oBigbox.style.display = "none";
+        }
+        oSmallbox.onmousemove = function(e) {
+            oSpa.style.left = e.clientX - oSpa.offsetWidth / 2 + "px";
+            oSpa.style.top = e.clientY - oSpa.offsetHeight / 2 + "px";
+
+            if (oSpa.offsetLeft < 0) {
+                oSpa.style.left = 0 + "px";
+            }
+            if (oSpa.offsetLeft >= oSmallbox.offsetWidth - oSpa.offsetWidth) {
+                oSpa.style.left = oSmallbox.offsetWidth - oSpa.offsetWidth + "px";
+            }
+            if (oSpa.offsetTop < 0) {
+                oSpa.style.top = 0 + "px";
+            }
+            if (oSpa.offsetTop >= oSmallbox.offsetHeight - oSpa.offsetHeight)
+                oSpa.style.top = oSmallbox.offsetHeight - oSpa.offsetHeight + "px";
+
+            //小的span的最大移动距离
+            var small;
+            small = oSmallbox.offsetWidth - oSpa.offsetWidth;
+            smallY = oSmallbox.offsetHeight - oSpa.offsetHeight;
+            //大的img的最大移动距离
+            var big;
+            big = oImg.offsetWidth - oBigbox.offsetWidth;
+            bigY = oImg.offsetHeight - oBigbox.offsetHeight;
+            var percent = oSpa.offsetLeft / oSpa.offsetWidth;
+            var percentY = oSpa.offsetTop / oSpa.offsetHeight
+            oImg.style.left = -big * percent + "px";
+            oImg.style.top = -bigY * percentY + "px";
+
+
+        }
+    </script>
+</body>
+
+</html>

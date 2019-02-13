@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* #d0{ 
+            height:100px;
+        }*/
+        /* #d0{ 
+            overflow: hidden;
+        }*/
+        #d1{
+            width:200px;
+            height:100px;
+            background-color: darkolivegreen;
+            float: left;
+            
+        }
+        #d2{
+           
+           width:200px;
+            height:100px;
+            background-color: darkslategrey;
+
+           
+            
+        }
+        /* #d3{  
+             clear:both;
+         } */
+        /* #d0::after{ 
+            content: '';
+            display: block;
+            clear:both;
+        }
+        */
+         /* 
+            
+        用float属性浮动后，会释放空间，造成塌陷
+        解决塌陷：
+            1 父元素加  overflow：hidden；
+            2 给父元素设置高度
+            3 给浮动元素加兄弟元素，然后在兄弟元素中清楚浮动  clear：both；
+            4 给父元素加：：after伪元素  display为块级  clear：both；
+        */
+    </style>
+</head>
+<body>
+    
+    <div id="d0">
+        <div id="d1">111</div>
+        <div id="d2">222</div>
+        <div id="d3"></div>
+    </div>
+    
+    <h1>aasasdsadasd</h1>
+</body>
+</html>

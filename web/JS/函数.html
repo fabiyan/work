@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- isNaN():判断是否为数字  非数字返回true，数字返回false -->
+    <!-- 当函数中无return，默认返回undefined -->
+    <!-- function函数中的变量只能在它函数中使用，为局部变量，而在函数外的为全局变量
+    特殊例子： -->
+    <script>
+        var b = 20;
+        function fn() {
+           a = 10;
+            console.log(a+"aa");
+        }
+        // console.log(b);
+        fn();//重中之重，必须调用，才能实现不加var的功能；
+        console.log(a);
+        //若function中的变量没有用var定义，则可以被全局调用,但必须先调用function函数才有用；例子如上
+    </script>
+    <script>
+        var a = prompt("请输入x的值", "10");
+        function b(num) {
+            return 4 * num * num + 3 * num + 2;
+        }
+        var c = b(a);
+        alert(c);
+        document.write(c);
+
+
+        //把函数赋给add，而不是将return的返回值赋给add，调用的时候可以直接调用add(x,y),但顺序很重要;
+        // var add=function(x,y){
+        //     return x+y;
+        // }
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+    </ul>
+    <script>
+        var aLi=document.getElementsByTagName('li');
+        console.log(Array.from(aLi));
+
+        var a=Array.from(aLi);
+        a.push('hello');
+        console.log(a);
+    
+        var arr=Array.of(3,4,5);
+        console.log(arr);
+
+
+        var arr = ['a','b','c','d','e','f','g'];
+        // console.log( arr);
+        // console.log( arr.copyWithin(0,2,6) );//将2-5的值依此替换给从0开始的
+        // console.log(arr.copyWithin(0,1,3));
+
+      
+        // var result = arr.find(function(val,index){//val :值，index：索引
+        //     // console.log(val,index);//全输出
+        //       // 返回第一个符合条件的成员
+        //     return index>1;
+        // })
+        // console.log(result);
+
+        // var result=arr.find(function(val,index){
+        //     return index<3;
+        // })
+        // console.log(result);
+
+
+
+        // console.log(arr.fill('xx',1,4))//将从1-3依此用xx替换
+            // console.log(arr.fill('hello',4));
+            // console.log(arr.fill('hello',1,2));
+
+
+    //    for(var val of arr){
+    //        console.log(val);//输出值
+    //    }
+    
+    //    for(var val of arr.keys()){
+    //        console.log(val);//输出索引
+    //    }
+
+        // for(var val of arr.entries()){
+        //     console.log(val);//输出索引和值
+        // }
+        // for(var [index,val] of arr.entries()){
+        //     console.log(index,val);
+        // }
+
+
+            // 无返回值，针对每个元素调用函数本身
+            // arr.forEach(function(val,index){
+            //     console.log(val,index);
+            // })
+
+
+            //返回原数组处理过的新数组
+            // var result = arr.map(function(val,index){
+            //     if(index<3){
+            //     val=val+"xx";
+            //     }
+            //     else{
+            //     val=val+"yy";
+            //     }
+            //     return val;
+            // })
+            // console.log(result);
+
+            var result=arr.filter(function(val,index){
+                if(index>3)
+                return val;
+            })
+            console.log(result);
+
+
+            var arr1=[{
+                    name:'zs',
+                    age:12
+                },{
+                    name:'ls',
+                    age:19
+                },{
+                    name:'zw',
+                    age:23
+                }]
+                var result=arr1.filter(function(ob,indx){
+                    if(ob.age>18)
+                    return ob.name;
+                })
+                console.log(result);
+            
+
+    </script>
+</body>
+</html>

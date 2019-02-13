@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const与var的区别
+         //1.const没有变量提升
+        //2.块级作用域，变量不会释放。
+        //3.let 变量不能重复声明,也不能用var去覆盖let 已经声明的变量
+        //4.le具有临时性死区（暂时失效区），在当前作用域不允许有同名的变量进来
+
+        // const声明引用数据类型时，变量指向的地址不能改，但变量中的内容可以改，
+        // 若不想改，则加上Object.freeze(变量名)；
+
+            const a=5;
+            const a=10;
+            console.log(a);
+
+            // const obj={
+            //       name:'lisi'
+            // }
+           
+            // obj.name="zs";
+            // console.log(obj.name);
+
+            const obj={
+                  name:'lisi'
+            }
+           Object.freeze(obj);
+            obj.name="zs";
+            console.log(obj.name);
+
+            
+        </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #app{
+            margin:0 auto;
+            width:300px;
+     
+        }
+        h2{
+            text-align: center;
+        }
+        li{
+            background: green;
+            width:200px;
+            height:30px;
+            margin-bottom: 10px;
+            list-style: none;
+        }
+        .active{
+            background: red;
+        }
+      span{
+          float:right;
+      }
+      #all{
+          width:300px;
+          height:100px;
+     
+         border-top: 3px solid gray;
+      }
+ 
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>services</h2>
+        <ul>
+            <li v-for="(obj,index) in list" :class="{active:obj.isA}"  @click="color(obj)">
+                {{obj.name}}<span>{{obj.value}}</span></li>
+        </ul>
+        <div id="all"> total:<span>{{total()}}</span></div>
+    </div>
+<script src="../vue.js"></script>
+<script>
+    var vm=new Vue({
+        el:'#app',
+        data:{
+            list:[{
+                name:'aaa',
+                value:120,
+                isA:false
+            },
+            {
+                name:'bbb',
+                value:200,
+                isA:false
+            },{
+                name:'ccc',
+                value:150,
+                isA:false
+            }],
+            money:0
+        },
+        methods:{
+            color(obj){
+               obj.isA=!obj.isA;
+        
+            },
+            total(){
+                let count=0;
+                this.list.forEach((obj,index) => {
+                    
+                if(obj.isA==true){
+                    count=count+obj.value;
+                }
+                // if(obj.isA==false){
+                //     if(count==0)
+                //     count=0;
+                //     else
+                //     count=count-obj.value;
+                // }
+                });
+                return count;
+            }
+        }
+    })
+
+</script>
+</body>
+
+</html>

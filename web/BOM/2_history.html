@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="oBtn">click</button>
+    <script>
+        var cli=document.getElementById("oBtn");
+ 
+        cli.onclick=function (){
+
+            // 返回历史纪录中的上一层
+            history.back();
+
+            // 返回历史纪录中的下一层
+            history.forward();
+
+            // 返回历史纪录中某一层,num可正可负
+            history.go(num)
+        }
+    </script>
+</body>
+</html>
