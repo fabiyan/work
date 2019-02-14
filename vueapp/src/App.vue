@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Cheader :bgc="bgc" :menu="men"></Cheader>
+    <Cheader :bgc="bgc" :menue="men">
+    </Cheader>
      <div id="content">
            <router-view></router-view>
       </div>

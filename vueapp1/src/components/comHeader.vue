@@ -1,29 +1,29 @@
 <template>
     <div>
-       <header  :style="{background:bgc}">
+       <header>
             <span class="goHome">首页</span>
-         {{menue}}
+        电影
         </header>
     </div>
 </template>
 
 <script>
     export default {
-        props:['bgc','menue'],
+
        
     }
 </script>
 
 <style scoped>
    header{
-        height:1rem;
+        height:3rem;
         background: #3b3939;
         text-align: center;
         position: fixed;
         top:0px;
         left:0;
         width:100%;
-        line-height: 1rem;
+        line-height: 3rem;
         color: white
     }
     .goHome{
