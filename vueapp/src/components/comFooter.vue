@@ -1,5 +1,5 @@
 <template>
-    <div class="footer" :style="{background:bg}">
+    <div class="footer" :style="{background:obj.bg}">
         <ul id="colo">
             <li v-for="(obj,index) in menu" :key="index">
                 <router-link :to="obj.path" @click.native="color(obj)">{{obj.name}}</router-link>
@@ -15,17 +15,25 @@
     export default {
         data(){
             return {
-                bg:''
+                obg:{}
             }
         },
-        props:['menu'],
+        props:['menu','obj'],
         methods:{
         color(obj){
-            this.bg=obj.bg;
-            this.$emit('bgcolor',this.bg)
+            this.obg=obj;
+            // this.$emit('bgcolor',this.bg)
+             this.$emit('bgcolor',obj)
         }
     }
     }
+//   created(){
+//     let result=this.menu.filter((obj,index)=>{
+//       return obj.path==this.$route.path;
+//     });
+//     this.obj=result[0];
+//     console.log(this.obj);
+//   }
   
 </script>
 
