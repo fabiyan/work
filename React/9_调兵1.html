@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+    class Main extends React.Component{
+        constructor(params){
+            super(params);
+              this.state={
+            num:120
+        }
+        this.dec=this.dec.bind(this);
+    }
+    dec(result){
+        let sum=this.state.num;
+        sum=sum-result;
+        this.setState({
+            num:sum
+        })
+    }
+
+          render(){
+            return(
+                <div>
+                    <p>剩余士兵数量：{this.state.num}</p>
+                    <C1 add1={this.dec} sum={this.state.num}></C1>
+                    <C2 add2={this.dec} sum={this.state.num}></C2>
+                </div>
+            )  
+        }
+       
+        }
+      
+    
+    class C1 extends React.Component{
+        constructor(params){
+            super(params);
+            this.state={
+                num1:100
+            }
+            this.add1=this.add1.bind(this);
+        }
+        add1(){
+            let a=parseInt(this.myInput.value);
+            if(this.props.sum>=a)
+            {
+                console.log(this.props.sum,a)
+            this.props.add1(a);
+            let b=this.state.num1+a;
+            this.setState({
+                num1:b
+            })
+        }
+            else{
+                alert('士兵数量不足');
+            }
+        }
+        render(){
+            return(
+                <div>
+                <p>将军A有士兵：{this.state.num1} </p>
+                <input type="text" ref={input=>{this.myInput=input}}></input>
+                <button onClick={this.add1}>调兵</button>
+                </div>
+            )
+        }
+    }
+
+    class C2 extends React.Component{
+        constructor(params){
+            super(params);
+            this.state={
+                num2:90
+            }
+            this.add2=this.add2.bind(this);
+        }
+        add2(){  
+            let a=parseInt(this.myInput.value);
+            if(this.props.sum>=a) 
+         {
+            this.props.add2(a);
+            let b=this.state.num2+a;
+            this.setState({
+                num2:b
+            })
+        }
+        else{
+            alert('士兵数量不足');
+        }
+    }
+        render(){
+            return(
+                <div>
+                <p>将军B有士兵：{this.state.num2} </p>
+                <input type="text" ref={input=>{this.myInput=input}}></input>
+                <button onClick={this.add2}>调兵</button>
+                </div>
+            )
+        }
+    }
+      ReactDOM.render(<Main></Main>,document.getElementById('root'));
+    </script>
+</body>
+</html>

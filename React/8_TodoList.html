@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+      class Con extends React.Component{
+          constructor(params){
+            super(params);
+            this.state={
+                todos:['吃饭','睡觉','打豆豆'],
+                // show:[]
+            }
+            this.addlist=this.addlist.bind(this);
+          }
+          addlist(result){
+            console.log(result);
+            // this.state.show=[...this.state.todos];
+            let arr=[...this.state.todos]
+            arr.push(result);
+            console.log(arr);
+            this.setState({
+                todos:arr
+            })
+          }
+          render(){
+              return(
+                  <div>
+                    <h1>TodoList</h1>
+                    <Top addl={this.addlist}></Top>
+                    <Bottom todo={this.state.todos}></Bottom>
+                    </div>
+              )
+          }
+      }
+    class Top extends React.Component{
+        constructor(params){
+            super(params);
+            this.add=this.add.bind(this);
+        }
+        add(){
+            if(this.myInput.value){
+                 this.props.addl(this.myInput.value);
+                 this.myInput.value="";
+            }
+           
+            // this.setState({
+            //     // this.state.todos.push()
+            //     todos:[...this.state.todos,this.refs.name.value]
+            // })
+        //     console.log(this.refs.name.value);
+        // }
+   }
+        render(){
+            return (
+                <div>
+                <input type="text" ref={input=>{this.myInput=input}}></input>
+                <button onClick={this.add}>add</button>    
+                </div>
+            )
+        }
+    
+}
+    class Bottom extends React.Component{
+        render(){
+            return(
+                     <div>
+                <ul>
+                    {
+                        this.props.todo.map((val,index)=>{
+                            return <li key={index}>{val}</li>
+                        })
+                    }
+                </ul>
+            </div>
+            )
+       
+        }
+    }
+    ReactDOM.render(<Con></Con>,document.getElementById('root'));
+    </script>
+</body>
+</html>
