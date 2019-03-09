@@ -54,12 +54,12 @@ export default {
     getMovie() {
       this.isShow = true;
       // Axios.get('/movie.json')
-      // Axios.get(
-      //   "https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?start=" +
-      //     this.movieList.length +
-      //     "&count=5"
-      // )
-      Axios.get('/movie'+this.movieList.length+'.json')
+      Axios.get(
+        "https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?start=" +
+          this.movieList.length +
+          "&count=5"
+      )
+      // Axios.get('/movie'+this.movieList.length+'.json')
         .then(result => {
           console.log(result);
           // this.movieList=result.data.subjects;

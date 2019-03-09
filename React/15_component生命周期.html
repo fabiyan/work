@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+        class Con extends React.Component{
+            constructor(params){
+                super(params);
+                this.state={
+                opacity:0.5
+            }
+            }
+          
+            componentWillMount(){
+                this.setState({
+                    opacity:0.7
+                })
+            }
+            componentDidMount(){
+               this.timer= setInterval(() => {
+                    if(this.state.opacity<=0){
+                       this.setState({
+                            opacity:1
+                       })
+                    }
+                    else{
+                        this.setState({
+                            opacity:this.state.opacity-0.1
+                        })
+                    }
+                    console.log('计时器');
+                },200 );
+                
+            }
+            componentWillReceiveProps(nextProps,nextState){
+                console.log('componentWillReceiveProps',nextProps,nextState);
+            }
+            // shouldComponentUpdate(nextProps,nextState){
+            //     console.log('应该更新吗shouldComponentUpdate',nextProps,nextState)
+            //     return false;
+            //     //false页面将不再变化,但控制台一直有输出
+            //     //true页面继续变化，控制台一直有输出
+        
+            // }
+             componentDidUpdate(nextProps,nextState){
+                console.log('我更新结束啦,componentDidUpdate',nextProps,nextState)
+            }
+            componentWillUpdate(nextProps,nextState){
+                console.log('我就要更新啦,componentWillUpdate',nextProps,nextState)
+            }
+           //componentDidUpdate和componentWillUpdate在初始化渲染的时候不会被调用
+            onmount(){
+                ReactDOM.unmountComponentAtNode(document.getElementById('root'));
+            }
+            componentWillUnmount(){
+               clearInterval(this.timer);
+                console.log('我就要卸载啦');
+            }
+            render(){
+            // let sty={
+            //     opacity:0.5,
+            //     background:'yellow'
+            // }      
+            let {opacity}=this.state;
+                return(
+                    <div>
+                        <h1 style={{opacity}}>哈哈哈哈哈</h1>
+                        <button onClick={this.onmount}>卸载组件</button>
+                    </div>
+                )
+            }
+        }
+
+    ReactDOM.render(<Con></Con>,document.getElementById('root'));
+    </script>
+</body>
+</html>
