@@ -1,0 +1,103 @@
+{
+    "error_code": 0,
+    "reason": "Success",
+    "result": [{
+        "title": "黄山",
+        "grade": "AAAAA",
+        "price_min": "80",
+        "comm_cnt": "3694",
+        "cityId": "45",
+        "address": "安徽省黄山市黄山风景区 ",
+        "sid": "5305",
+        "url": "http://www.ly.com/scenery/BookSceneryTicket_5305.html",
+        "imgurl": "http://upload.17u.com/uploadfile/scenerypic_common/160_120/2014/06/03/2/201406031912026124241.jpg"
+    },
+    {
+        "title": "西递",
+        "grade": "AAAAA",
+        "price_min": "90",
+        "comm_cnt": "1582",
+        "cityId": "45",
+        "address": "安徽省黄山市黟县 ",
+        "sid": "29001",
+        "url": "http://www.ly.com/scenery/BookSceneryTicket_29001.html",
+        "imgurl": "http://upload.17u.com/uploadfile/scenerypic_common/160_120/2014/05/27/2/201405271044363916224.jpg"
+    },
+    {
+        "title": "翡翠谷",
+        "grade": "AAAA",
+        "price_min": "46",
+        "comm_cnt": "1307",
+        "cityId": "45",
+        "address": "黄山市黄山风景区翡翠谷 ",
+        "sid": "178",
+        "url": "http://www.ly.com/scenery/BookSceneryTicket_178.html",
+        "imgurl": "http://upload.17u.com/uploadfile/scenerypic_common/160_120/2014/09/24/2/201409241505363167062.jpg"
+    },{
+        "title": "黄山",
+        "grade": "AAAAA",
+        "price_min": "80",
+        "comm_cnt": "3694",
+        "cityId": "45",
+        "address": "安徽省黄山市黄山风景区 ",
+        "sid": "5305",
+        "url": "http://www.ly.com/scenery/BookSceneryTicket_5305.html",
+        "imgurl": "http://upload.17u.com/uploadfile/scenerypic_common/160_120/2014/06/03/2/201406031912026124241.jpg"
+    },
+    {
+        "title": "西递",
+        "grade": "AAAAA",
+        "price_min": "90",
+        "comm_cnt": "1582",
+        "cityId": "45",
+        "address": "安徽省黄山市黟县 ",
+        "sid": "29001",
+        "url": "http://www.ly.com/scenery/BookSceneryTicket_29001.html",
+        "imgurl": "http://upload.17u.com/uploadfile/scenerypic_common/160_120/2014/05/27/2/201405271044363916224.jpg"
+    },
+    {
+        "title": "翡翠谷",
+        "grade": "AAAA",
+        "price_min": "46",
+        "comm_cnt": "1307",
+        "cityId": "45",
+        "address": "黄山市黄山风景区翡翠谷 ",
+        "sid": "178",
+        "url": "http://www.ly.com/scenery/BookSceneryTicket_178.html",
+        "imgurl": "http://upload.17u.com/uploadfile/scenerypic_common/160_120/2014/09/24/2/201409241505363167062.jpg"
+    },
+    {
+        "title": "黄山",
+        "grade": "AAAAA",
+        "price_min": "80",
+        "comm_cnt": "3694",
+        "cityId": "45",
+        "address": "安徽省黄山市黄山风景区 ",
+        "sid": "5305",
+        "url": "http://www.ly.com/scenery/BookSceneryTicket_5305.html",
+        "imgurl": "http://upload.17u.com/uploadfile/scenerypic_common/160_120/2014/06/03/2/201406031912026124241.jpg"
+    },
+    {
+        "title": "西递",
+        "grade": "AAAAA",
+        "price_min": "90",
+        "comm_cnt": "1582",
+        "cityId": "45",
+        "address": "安徽省黄山市黟县 ",
+        "sid": "29001",
+        "url": "http://www.ly.com/scenery/BookSceneryTicket_29001.html",
+        "imgurl": "http://upload.17u.com/uploadfile/scenerypic_common/160_120/2014/05/27/2/201405271044363916224.jpg"
+    },
+    {
+        "title": "翡翠谷",
+        "grade": "AAAA",
+        "price_min": "46",
+        "comm_cnt": "1307",
+        "cityId": "45",
+        "address": "黄山市黄山风景区翡翠谷 ",
+        "sid": "178",
+        "url": "http://www.ly.com/scenery/BookSceneryTicket_178.html",
+        "imgurl": "http://upload.17u.com/uploadfile/scenerypic_common/160_120/2014/09/24/2/201409241505363167062.jpg"
+    }
+]
+}
